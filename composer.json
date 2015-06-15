@@ -1,0 +1,8 @@
+{
+	"name": "madebydavid/wizzie-theme",
+	"description": "Wizzie Wizzie WP theme", 
+	"type": "wordpress-theme",
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}
