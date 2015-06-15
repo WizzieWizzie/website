@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e9f7e02d24f3d40aab70282db6972000",
+    "hash": "fccdeea72a1470314c479fddc6ab8d04",
     "packages": [
         {
             "name": "composer/installers",
@@ -210,6 +210,21 @@
                 "issues": "https://github.com/madebydavid/advanced-custom-fields-repeater/issues"
             },
             "time": "2014-01-24 14:33:01"
+        },
+        {
+            "name": "madebydavid/wizzie-theme",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:madebydavid/wizziewizziewptheme.git",
+                "reference": "6d1e5620b810a9d865d71c6f7ea7a7b645d1a623"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-theme",
+            "description": "Wizzie Wizzie WP theme",
+            "time": "2015-06-15 11:44:41"
         },
         {
             "name": "madebydavid/wordpress-skeleton-config-salter",
@@ -788,7 +803,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "madebydavid/advanced-custom-fields-repeater": 20
+        "madebydavid/advanced-custom-fields-repeater": 20,
+        "madebydavid/wizzie-theme": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
