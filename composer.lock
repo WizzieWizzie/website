@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fccdeea72a1470314c479fddc6ab8d04",
+    "hash": "5fbb83e6636eabde17f838e5e5a32446",
     "packages": [
         {
             "name": "composer/installers",
@@ -187,6 +187,34 @@
             "time": "2015-06-11 15:15:30"
         },
         {
+            "name": "madebydavid/acf-flexible-content",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:madebydavid/acf-flexible-content.git",
+                "reference": "db2fdd7fcfe10c269036e3cdcbe36bfe7d440544"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "time": "2015-06-15 12:39:47"
+        },
+        {
+            "name": "madebydavid/acf-options-page",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:madebydavid/acf-options-page.git",
+                "reference": "47247e1781a3b606a4b0228aef89c33416ceb625"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "time": "2015-06-15 12:45:51"
+        },
+        {
             "name": "madebydavid/advanced-custom-fields-repeater",
             "version": "dev-master",
             "source": {
@@ -212,6 +240,30 @@
             "time": "2014-01-24 14:33:01"
         },
         {
+            "name": "madebydavid/advanced-custom-fields-wpcli",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/madebydavid/advanced-custom-fields-wpcli.git",
+                "reference": "620c87803082250c7265396cdc74026011f1191f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/madebydavid/advanced-custom-fields-wpcli/zipball/620c87803082250c7265396cdc74026011f1191f",
+                "reference": "620c87803082250c7265396cdc74026011f1191f",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "description": "Fork of https://github.com/hoppinger/advanced-custom-fields-wpcli for composer installer",
+            "support": {
+                "source": "https://github.com/madebydavid/advanced-custom-fields-wpcli/tree/master"
+            },
+            "time": "2014-05-26 14:52:06"
+        },
+        {
             "name": "madebydavid/wizzie-theme",
             "version": "dev-master",
             "source": {
@@ -225,40 +277,6 @@
             "type": "wordpress-theme",
             "description": "Wizzie Wizzie WP theme",
             "time": "2015-06-15 11:44:41"
-        },
-        {
-            "name": "madebydavid/wordpress-skeleton-config-salter",
-            "version": "0.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/madebydavid/WordpressSkeletonConfigSalter.git",
-                "reference": "3f998be973c8a66706a654384154a846e1b341ff"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/madebydavid/WordpressSkeletonConfigSalter/zipball/3f998be973c8a66706a654384154a846e1b341ff",
-                "reference": "3f998be973c8a66706a654384154a846e1b341ff",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">=5.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "MadeByDavid": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "madebydavid",
-                    "email": "sutherland.dave@gmail.com"
-                }
-            ],
-            "description": "Salts the wp-config of madebydavid/wordpress-skeleton projects",
-            "time": "2013-11-28 12:44:41"
         },
         {
             "name": "mustache/mustache",
@@ -639,26 +657,6 @@
             "homepage": "https://wordpress.org/plugins/better-wp-security/"
         },
         {
-            "name": "wpackagist-plugin/cron-view",
-            "version": "1.03",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/cron-view/",
-                "reference": "tags/1.03"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/cron-view.1.03.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/cron-view/"
-        },
-        {
             "name": "wpackagist-plugin/disable-comments",
             "version": "1.3.1",
             "source": {
@@ -719,16 +717,16 @@
             "homepage": "https://wordpress.org/plugins/hide-admin-bar-from-non-admins/"
         },
         {
-            "name": "wpackagist-plugin/options-framework",
-            "version": "1.8.4",
+            "name": "wpackagist-plugin/simple-custom-post-order",
+            "version": "2.3",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/options-framework/",
-                "reference": "tags/1.8.4"
+                "url": "http://plugins.svn.wordpress.org/simple-custom-post-order/",
+                "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/options-framework.1.8.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/simple-custom-post-order.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -736,19 +734,19 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/options-framework/"
+            "homepage": "https://wordpress.org/plugins/simple-custom-post-order/"
         },
         {
-            "name": "wpackagist-plugin/social-media-widget",
-            "version": "4.0.2",
+            "name": "wpackagist-plugin/wordpress-importer",
+            "version": "0.6",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/social-media-widget/",
-                "reference": "tags/4.0.2"
+                "url": "http://plugins.svn.wordpress.org/wordpress-importer/",
+                "reference": "tags/0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/social-media-widget.4.0.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -756,7 +754,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/social-media-widget/"
+            "homepage": "https://wordpress.org/plugins/wordpress-importer/"
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
@@ -804,7 +802,10 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "madebydavid/advanced-custom-fields-repeater": 20,
-        "madebydavid/wizzie-theme": 20
+        "madebydavid/wizzie-theme": 20,
+        "madebydavid/acf-flexible-content": 20,
+        "madebydavid/acf-options-page": 20,
+        "madebydavid/advanced-custom-fields-wpcli": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
