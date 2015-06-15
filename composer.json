@@ -15,8 +15,7 @@
         {
             "type": "vcs",
             "url":"git@github.com:madebydavid/advanced-custom-fields-repeater.git"
-        },
-
+        }
     ],
     "require": {
 	"johnpbloch/wordpress": "4.*",
@@ -55,7 +54,6 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "MadeByDavid\\WordpressSkeletonConfigSalter::salt"
         ]
     }
 }
