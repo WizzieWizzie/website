@@ -9,7 +9,7 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 	define( 'WP_LOCAL_DEV', false );
 	define( 'DB_NAME', 'Wizzie' );
 	define( 'DB_USER', 'root' );
-	define( 'DB_PASSWORD', '' );
+	define( 'DB_PASSWORD', '***REMOVED***' );
 	define( 'DB_HOST', 'localhost' ); 
 	define( 'WP_HOME', 'http://www.wizziewizzie.org');
 	define( 'WP_SITEURL', 'http://www.wizziewizzie.org/wordpress');
