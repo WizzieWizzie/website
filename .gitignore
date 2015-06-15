@@ -1,0 +1,10 @@
+/local-config.php
+.buildpath
+.project
+.settings/
+vendor/
+wordpress/
+composer.phar
+content/debug.log
+content/uploads
+content/uploads/*

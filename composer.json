@@ -1,0 +1,61 @@
+{
+    "name": "madebydavid/wizzie-website",
+    "description": "Wizzie Wizzie Website",
+    "authors": [
+        {
+            "name": "madebydavid",
+            "email": "sutherland.dave@gmail.com"
+        }
+    ],
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"http://wpackagist.org"
+        },
+        {
+            "type": "vcs",
+            "url":"git@github.com:madebydavid/advanced-custom-fields-repeater.git"
+        },
+
+    ],
+    "require": {
+	"johnpbloch/wordpress": "4.*",
+        "composer/installers": "~1.0",
+        "madebydavid/wordpress-skeleton-config-salter": "0.0.*",
+        "wpackagist-plugin/social-media-widget": "*",
+        "wpackagist-plugin/options-framework": "*",
+        "wpackagist-plugin/wordpress-seo": "*",
+        "wp-cli/wp-cli": "*",
+        "wpackagist-plugin/cron-view": "*",
+        "wpackagist-plugin/disable-comments": "*",
+        "wpackagist-plugin/wp-mail-smtp": "*",
+        "wpackagist-plugin/advanced-custom-fields": "*",
+        "madebydavid/advanced-custom-fields-repeater": "master-dev",
+        "wpackagist-plugin/better-wp-security": "*",
+        "wpackagist-plugin/google-analytics-for-wordpress": "*",
+        "wpackagist-plugin/hide-admin-bar-from-non-admins": "*"
+    },
+    "autoload": {
+        "psr-0": {
+        }
+    },
+    "extra": {
+	"wordpress-install-dir": "wordpress",
+        "installer-paths": {
+            "content/plugins/{$name}": [
+                "type:wordpress-plugin"            
+            ],
+            "content/mu-plugins/{$name}" : [
+                "type:wordpress-muplugin"
+            ],
+            "content/themes/{$name}" : [
+                "type:wordpress-theme"
+            ]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "MadeByDavid\\WordpressSkeletonConfigSalter::salt"
+        ]
+    }
+}
