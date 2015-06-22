@@ -265,38 +265,34 @@ WIZZ.formUI = function(){
 
     $select.addClass('default');
 
+    // Dropdown 'Default' Styling via .default class
     $select.on('change', function(){
-
         if (!$(this).val()) {
-
             $(this).addClass('default');
-
         } else {
-
             $(this).removeClass('default');
         }
-
     })
 
     var validateFront = function () {
+
         if (true === $('#signUpForm').parsley().isValid()) {
             $('.bs-callout-info').removeClass('hidden');
             $('.bs-callout-warning').addClass('hidden');
-        return true;
+            return true;
         } else {
             $('.bs-callout-info').addClass('hidden');
             $('.bs-callout-warning').removeClass('hidden');
-        return false;
+            return false;
         }
+
     };
 
-    $('#signUpForm').on('click', 'input[type=submit]', function () {
-
-        $('#signUpForm').parsley().validate();
+    $('.form-generic').on('click', 'input[type=submit]', function () {
+        $(this).parsley().validate();
 
         // Stop the Form from submitting
         return validateFront();
-
     });
 
 }

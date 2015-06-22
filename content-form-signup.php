@@ -1,4 +1,4 @@
-<div class="signup-form">
+<section class="form-generic signUpForm">
 
     <div class="g-row">
 

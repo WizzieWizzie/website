@@ -205,7 +205,13 @@ h4 { font-family: 'Roboto', Helvetica, Arial, sans-serif; font-weight: 400; font
 
 h4.form { font-size: 40px; line-height: 40px; margin-bottom: 40px; letter-spacing: 0.015em; font-family: 'Amatic SC', Helvetica, Arial, sans-serif; }
 
-p { margin-bottom: 1.25em; font-size: 14px; line-height: 1.875em; color: rgb(0,0,0); }
+p,
+em, 
+ul { margin-bottom: 1.25em; font-size: 14px; line-height: 1.875em; color: rgb(0,0,0); }
+
+em { font-style: normal; font-weight: 400; }
+
+li { list-style: disc outside; }
 
 .kern-1 { margin-right: -0.05em; }
 
@@ -218,7 +224,7 @@ strong { font-weight: 500; }
 /* Disable webkit smoothing for readability */
 p,
 .intro-wrap h3,
-.signup-form,
+.form-generic,
 footer * { -webkit-font-smoothing: auto; }
 
 .holding { background: white; }
@@ -352,6 +358,8 @@ section { width: 100%; padding: 0 60px; }
         background:         linear-gradient(to right,  rgb(115, 14, 130) 0%, rgb(255, 28, 132) 100%);
     }
 
+    .gradient.breakup { padding: 40px; clear: both; }
+
 	.color-scheme-green .gradient {
         background: -webkit-linear-gradient(left,      rgb(97, 214, 240) 0%, rgb(43, 221, 110) 100%);
         background:         linear-gradient(to right,  rgb(97, 214, 240) 0%, rgb(43, 221, 110) 100%);
@@ -370,7 +378,7 @@ section { width: 100%; padding: 0 60px; }
 
 	section[data-pattern="divide"]:before   { background: transparent url("../images/patterns/ww_pattern_divide2.png") repeat scroll 0 0; background-attachment: fixed; }
 
-
+    section .post-text { background: rgb(255,255,255); padding: 40px 60px; overflow: hidden; }
 
 /* Intro wrap */
 .intro-wrap { background: rgb(255,255,255); margin: 0 -60px; padding: 80px 60px; overflow: hidden; }
@@ -403,52 +411,55 @@ section { width: 100%; padding: 0 60px; }
 
     .news-single header { padding: 0px; }
 
-    .news-single .post-text { background: rgb(255,255,255); padding: 40px 60px; overflow: hidden; }
-
 /* Volunteer section */
-.volunteer { overflow: hidden; padding: 60px 60px;}
+.module-quote { overflow: hidden; padding: 60px; }
 
-	.volunteer blockquote { display: table-cell; color: black; padding: 60px 40px; font-size: 33px; line-height: 41px; font-weight: 100; float: none; vertical-align: middle; }
+	.module-quote blockquote { display: table-cell; color: black; padding: 60px 40px; font-size: 33px; line-height: 41px; font-weight: 100; float: none; vertical-align: middle; }
 
-	.volunteer .quote-name { display: block; font-size: 16px; padding-top: 20px; font-weight: 400; }
+	.module-quote .quote-name { display: block; font-size: 16px; padding-top: 20px; font-weight: 400; }
 
-    .volunteer h3 { font-weight: 600; }
+    .module-quote h3 { font-weight: 600; }
 
-	.volunteer .cta-wrap { background: #FFF; display: table-row; }
+	.module-quote .cta-wrap { background: #FFF; display: table-row; }
 
-	.volunteer .cta { display: table-cell; color: white; background: #ffd623; height: 100%; text-align: center; padding: 60px 40px; float: none; }
+	.module-quote .cta { display: table-cell; color: white; background: #ffd623; height: 100%; text-align: center; padding: 60px 40px; float: none; }
 
-    .volunteer .cta p  { color: white; font-size: 15px; font-weight: 400; text-align: center; }
+    .module-quote .cta p  { color: white; font-size: 15px; font-weight: 400; text-align: center; }
 
 /* Sponsors section */
-.sponsors { background: #3cffa9; overflow: hidden; height: 160px; }
+.module-sponsors { background: #3cffa9; overflow: hidden; height: 160px; }
 
-    .sponsors .g-row { height: 100%; display: table; }
+    .module-sponsors .g-row { height: 100%; display: table; }
 
-    .sponsors .g-row:before { content: ""; position: absolute; width: 100%; height: 100%; left: -100%; }
+    .module-sponsors .g-row:before { content: ""; position: absolute; width: 100%; height: 100%; left: -100%; }
 
-    .sponsors h3 { padding: 0px 40px; color: white; background: #3cffaa; font-weight: 600; margin: 0px; width: 33.333%; display: table-cell; vertical-align: middle; }
+    .module-sponsors h3 { padding: 0px 40px; color: white; background: #3cffaa; font-weight: 600; margin: 0px; width: 33.333%; display: table-cell; vertical-align: middle; }
 
-    .sponsors ul { display: table; height: 100%; position: relative; }
+    .module-sponsors ul { display: table; height: 100%; position: relative; }
 
-    .sponsors ul:after { content: ""; position: absolute; top: 0px; width: 100%; background-color: #FFFFFF; height: 100%; }
+    .module-sponsors ul:after { content: ""; position: absolute; top: 0px; width: 100%; background-color: #FFFFFF; height: 100%; }
 
-    .sponsors ul li { background-color: white; display: table-cell; vertical-align: middle; padding: 0px 7%; }
+    .module-sponsors ul li { background-color: white; display: table-cell; vertical-align: middle; padding: 0px 7%; }
 
-/* Signup section */
-.signup-form { background: white; padding: 80px 0px 80px 100px; overflow: hidden; }
+/* FORMS */
+.form-generic { background: white; padding: 80px 0px 80px 100px; overflow: hidden; }
 
-    .signup-form .g-col-3 { padding-right: 40px; }
+    .form-generic .g-col-3 { padding-right: 40px; }
 
-    .signup-form p { position: relative; }
+    .form-generic p { position: relative; }
 
-    .signup-form label { font-weight: 500; }
+    .form-generic p + h3,
+    .form-generic ul + h3  { padding-top: 40px; }
 
-    .signup-form label span { display: block; color: #363636; margin-bottom: 10px; }
+    .form-generic ul { }
+    .form-generic ul li { margin-left: 20px; }
+    .form-generic em { margin-bottom: 16px; }
 
-    .signup-form label span.required:after { content: ""; width: 6px; height: 6px; background: #39fe42; border-radius: 50%; position: absolute; vertical-align: middle; margin-top: 11px; margin-left: 5px; }
+    .form-generic label { font-weight: 500; }
 
-    .signup-form div h4:nth-of-type(2) { margin-top: 90px; }
+    .form-generic label span { display: block; color: #363636; margin-bottom: 11px; }
+
+    .form-generic label span.required:after { content: ""; width: 6px; height: 6px; background: #39fe42; border-radius: 50%; position: absolute; vertical-align: middle; margin-top: 11px; margin-left: 5px; }
 
     /*
         FORM ELEMENTS
@@ -508,7 +519,6 @@ section { width: 100%; padding: 0 60px; }
         font-weight: normal;
         font-size: 12px;
         width: 100%;
-        margin-top: 29px;
         transition: all 0.2s;
     }
 
@@ -532,6 +542,10 @@ section { width: 100%; padding: 0 60px; }
         font-size: 14px;
     }
 
+    .parsley-errors-list li {
+        list-style: none;
+    }
+
     .bs-callout-info { color: #30b7ef; }
     .bs-callout-warning { color: #ff1c85; }
 
@@ -544,7 +558,14 @@ section { width: 100%; padding: 0 60px; }
         display: none;
     }
 
+/* Form specific */
+.form-generic.signUpForm { }
+.form-generic.signUpForm div h4:nth-of-type(2) { margin-top: 90px; }
+.form-generic.signUpForm div input[type='submit'] { margin-top: 32px; }
 
+.form-generic.volunteerForm { }
+.form-generic.volunteerForm em { display: block; }
+    
 /* When and Where section */
 .map { background: white; padding: 0px; }
 
@@ -602,10 +623,6 @@ section { width: 100%; padding: 0 60px; }
     .pagination ul li:last-of-type { margin-right: 0px; }
 
 	.pagination ul li a { font-weight: 500; }
-
-/* Breakup
------------------------------------------------------------------------------------------- */
-.breakup { padding: 40px; }
 
 /* Footer
 ------------------------------------------------------------------------------------------ */
@@ -715,6 +732,7 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
 
 
 	section { width: 100%; padding: 0 40px; }
+    section .post-text { padding: 40px; }
 
     footer { padding: 40px 20px; }
 
@@ -737,33 +755,31 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
     /* Single News Item */
     .news-single { }
 
-        .news-single .post-text { padding: 40px; }
-
         .news-single .g-col-2 { padding: 0px; }
 
     /* Volunteer section */
-    .volunteer {}
+    .module-quote  {}
 
-        .volunteer .cta { position: relative; }
+        .module-quote  .cta { position: relative; }
 
-        .volunteer .cta-wrap { display: block; }
+        .module-quote  .cta-wrap { display: block; }
 
-        .volunteer blockquote { display: block; font-size: 24px; line-height: 30px; }
+        .module-quote  blockquote { display: block; font-size: 24px; line-height: 30px; }
 
-        .volunteer .quote-name { font-size: 14px; padding-top: 10px; }
+        .module-quote  .quote-name { font-size: 14px; padding-top: 10px; }
 
     /* Sponsors section */
-    .sponsors { height: auto; padding: 0px; }
+    .module-sponsors { height: auto; padding: 0px; }
 
-        .sponsors h3 { width: 100%; display: block; text-align: center; padding: 60px 40px; }
+        .module-sponsors h3 { width: 100%; display: block; text-align: center; padding: 60px 40px; }
 
-        .sponsors ul { width: 100%; }
+        .module-sponsors ul { width: 100%; }
 
-        .sponsors ul li { padding: 20px 7%; }
+        .module-sponsors ul li { padding: 20px 7%; }
 
     /* Signup Section */
-    .signup-form { padding: 60px 10px 60px 30px; }
-        .signup-form form .g-col-3 { padding-top: 40px; }
+    .form-generic { padding: 60px 10px 60px 30px; }
+        .form-generic form .g-col-3 { padding-top: 40px; }
 
     /* When and Where section */
     .map { }
@@ -791,7 +807,8 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
 	.nav-device ul.social-share { margin-left: 70px; padding: 0; border-left: none; }
 
 	section { padding: 0 20px; }
-
+    section .post-text { padding: 40px; } .post-text { padding: 20px; }
+    
 	/* Intro */
 	.intro-wrap { background: rgb(255,255,255); margin: 0 -20px; padding: 40px 20px;  }
 	.intro-wrap .text { padding: 0 0 20px 0; }
@@ -804,12 +821,10 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
     /* Single News Item */
     .news-single { }
 
-        .news-single .post-text { padding: 20px; }
-
     /* Signup Section */
-    .signup-form { padding: 60px 0px; }
-        .signup-form .g-col-3 { padding-right: 20px; }
-        .signup-form h4 {font-size: 30px; line-height: 30px; margin-bottom: 20px; letter-spacing: 0.015em; }
+    .form-generic { padding: 60px 0px; }
+        .form-generic .g-col-3 { padding-right: 20px; }
+        .form-generic h4 {font-size: 30px; line-height: 30px; margin-bottom: 20px; letter-spacing: 0.015em; }
 
     /* When and Where section */
     .map { }

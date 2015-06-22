@@ -13,7 +13,7 @@
     foreach ($query->posts as $post) {
         setup_postdata($post); ?>
 
-        <section class="volunteer gradient" data-pattern="plus">
+        <section class="module-quote gradient" data-pattern="plus">
             <div class="g-row">
                 <div class="cta-wrap cf">
                 <blockquote class="g-col-2">

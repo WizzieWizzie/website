@@ -120,7 +120,7 @@ function wizzie_scripts(){
         wp_enqueue_script('owl');
     }
 
-    if ($template == 'template-signup') {
+    if ($template == 'template-signup' || $template == 'template-volunteer') {
         wp_enqueue_script('parsley');
     }
 

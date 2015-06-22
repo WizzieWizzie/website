@@ -1,4 +1,4 @@
-<section class="sponsors">
+<section class="module-sponsors">
     <div class="g-row">
         <h3>big thank you to our sponsors :)</h3>
         <ul>
