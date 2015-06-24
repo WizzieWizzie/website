@@ -104,10 +104,12 @@ function wizzie_scripts(){
     wp_register_script('gmapsapi',   '//maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&amp;key=' . $gmapsApiKey  , array()          , '1.0.0', true);
     wp_register_script('gmaps',       get_template_directory_uri().'/js/map.js'                                            , array('gmapsapi'), '1.0.0', true);
     wp_register_script('parsley',     get_template_directory_uri().'/js/parsley/parsley.min.js'               , array('jquery'), null   , true);
+    wp_register_script('velocity',    get_template_directory_uri().'/js/vendor/velocity.min.js'               , array('jquery'), null   , true);
 
     wp_enqueue_script('modernizr');
     wp_enqueue_script('plugins');
     wp_enqueue_script('migrate');
+    wp_enqueue_script('velocity');
     wp_enqueue_script('wizzie');
 
     /*

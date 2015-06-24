@@ -292,7 +292,7 @@ WIZZ.formUI = function(){
             
         } else {
             $('.bs-callout-info').addClass('hidden');
-            $('.bs-callout-warning').removeClass('hidden');            
+            $('.bs-callout-warning').removeClass('hidden');
         }
 
         return false;
