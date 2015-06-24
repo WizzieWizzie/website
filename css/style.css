@@ -457,15 +457,7 @@ section { width: 100%; padding: 0 60px; }
         left: 0px;
     }
 
-    .module-sponsors .wrap ul li {
-        opacity: 1;
-        -webkit-transition: all .3s ease-in-out;
-           -moz-transition: all .3s ease-in-out;
-             -o-transition: all .3s ease-in-out;
-                transition: all .3s ease-in-out;
-    }
-
-    a[data-next]{
+    .module-sponsors a[data-next]{
         border-radius: 50%;
         padding: 20px;
         width: 20px;
@@ -479,19 +471,17 @@ section { width: 100%; padding: 0 60px; }
         transform: translateX(-16px);
     }
     
-    a[data-next]:after{ 
+    .module-sponsors a[data-next]:after{ 
         content: "";
         background: transparent url('../images/svg/ui.svg') no-repeat scroll 0 0;
         width: 20px;
         height: 20px;
         position: absolute;
-        background-position: -10px -155px;
-        top: 10px;
-        left: 16px;
+        background-position: -10px -122px;
+        top: 9px;
+        left: 12px;
     }
 
-    .opacity-hidden { opacity: 0 !important; }
-    
 /*
     ``````````````````````````````````````````````````````````````````````````````
 */
@@ -828,11 +818,12 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
     /* Sponsors section */
     .module-sponsors { height: auto; padding: 0px; }
 
+        .module-sponsors .g-row { display: block; }
+
         .module-sponsors h3 { width: 100%; display: block; text-align: center; padding: 60px 40px; }
-
-        .module-sponsors .wrap { width: 100%; position: relative; height: 120px; }
-        .module-sponsors .wrap ul { }
-
+        .module-sponsors a[data-next] { transform: translateX(0px); bottom: 31px; top: initial; left: 15px; }
+        .module-sponsors .wrap { height: 110px; position: relative; }
+        .module-sponsors .wrap ul { padding-left: 40px; }
         .module-sponsors .wrap ul li { padding: 10px 30px; }
 
     /* Signup Section */
@@ -889,8 +880,8 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
         .map .owl-carousel .owl-wrapper-outer { padding: 0px 10px; }
 
     .module-sponsors { }
-        .module-sponsors h3 { padding-top: 30px; padding-bottom: 30px; }
-        .module-sponsors ul li { padding: 10px 20px; }
+    .module-sponsors h3 { padding-top: 40px; padding-bottom: 40px; }
+
 }
 
 

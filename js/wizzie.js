@@ -339,6 +339,43 @@ WIZZ.mapInteractions = function(){
 
 }
 
+/* Quotes Slider
+---------------------------------------------------------------------------------------------------- */
+WIZZ.quotesSlider = function(){
+
+    var $sponsors = $('.module-sponsors');
+    var $sponsorsList = $('.module-sponsors ul');
+
+    var $last;
+    var $current = $sponsorsList.find('li:last-of-type');
+
+    $('.module-sponsors').on('click', 'a[data-next]', function(){
+
+        $sponsorsList.velocity({
+            left: "+=" + $current.outerWidth(),
+        }, {
+            duration: 450,
+            easing: [0.7, 0.135, 0.15, 0.86],
+            complete: function(){
+
+                $last = $current;
+                $current = $current.prev('li');
+
+                $last.css('opacity', 0)
+                     .prependTo($sponsorsList)
+                     .velocity({ opacity: 1 }, 300)
+
+                $sponsorsList.css('left', 0);
+
+            }
+
+        });
+
+        return false;
+    })
+
+}
+
 
 /* Fire this puppy up...
 ---------------------------------------------------------------------------------------------------- */
@@ -350,7 +387,7 @@ $(function() {
     WIZZ.formUI();
     WIZZ.owlSlider();
     WIZZ.mapInteractions()
-
+    WIZZ.quotesSlider()
 
 	// For dev purpose
 	// console.log(WIZZ.viewport().width);
