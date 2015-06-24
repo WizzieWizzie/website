@@ -274,25 +274,36 @@ WIZZ.formUI = function(){
         }
     })
 
-    var validateFront = function () {
+    var validateFront = function (form) {
 
-        if (true === $('#signUpForm').parsley().isValid()) {
+        if (true === form.parsley().isValid()) {
             $('.bs-callout-info').removeClass('hidden');
             $('.bs-callout-warning').addClass('hidden');
-            return true;
+
+    	    var data = {
+                action: 'parent_signup',
+                data: form.serialize()
+            };
+
+            $.post(ajaxurl, data, function(response) {
+                alert(response);
+                location.reload();
+            });
+            
         } else {
             $('.bs-callout-info').addClass('hidden');
-            $('.bs-callout-warning').removeClass('hidden');
-            return false;
+            $('.bs-callout-warning').removeClass('hidden');            
         }
+
+        return false;
 
     };
 
     $('.form-generic').on('click', 'input[type=submit]', function () {
-        $(this).parsley().validate();
-
+    	var form = $(this).closest('form');
+        form.parsley().validate();
         // Stop the Form from submitting
-        return validateFront();
+        return validateFront(form);
     });
 
 }
