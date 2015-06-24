@@ -4,8 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5fbb83e6636eabde17f838e5e5a32446",
+    "hash": "934a3a1af06a08074b90675c8b24d659",
     "packages": [
+        {
+            "name": "asimlqt/php-google-spreadsheet-client",
+            "version": "2.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/asimlqt/php-google-spreadsheet-client.git",
+                "reference": "9cb74ee0670e3928d6b40dd53164c3f09c65e309"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/asimlqt/php-google-spreadsheet-client/zipball/9cb74ee0670e3928d6b40dd53164c3f09c65e309",
+                "reference": "9cb74ee0670e3928d6b40dd53164c3f09c65e309",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.4.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Google\\": "src/Google"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Asim Liaquat",
+                    "email": "asimlqt22@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Martin Czygan",
+                    "email": "martin.czygan@gmail.com",
+                    "homepage": "http://twitter.com/cvvfj",
+                    "role": "Packager"
+                }
+            ],
+            "description": "Google Spreadsheet PHP Client",
+            "homepage": "https://github.com/asimlqt/php-google-spreadsheet-client",
+            "keywords": [
+                "google",
+                "spreadsheet"
+            ],
+            "time": "2015-06-21 10:59:02"
+        },
         {
             "name": "composer/installers",
             "version": "v1.0.21",
@@ -100,6 +151,48 @@
                 "zikula"
             ],
             "time": "2015-02-18 17:17:01"
+        },
+        {
+            "name": "google/apiclient",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/google/google-api-php-client.git",
+                "reference": "2adb5ba90612858d4add0342eee6b8b9aaca398d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/google/google-api-php-client/zipball/2adb5ba90612858d4add0342eee6b8b9aaca398d",
+                "reference": "2adb5ba90612858d4add0342eee6b8b9aaca398d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Client library for Google APIs",
+            "homepage": "http://developers.google.com/api-client-library/php",
+            "keywords": [
+                "google"
+            ],
+            "time": "2015-05-21 19:35:32"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -269,14 +362,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:madebydavid/wizziewizziewptheme.git",
-                "reference": "6d1e5620b810a9d865d71c6f7ea7a7b645d1a623"
+                "reference": "e138bc7c38e382a77459ee1084f318084eb8e610"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
             "description": "Wizzie Wizzie WP theme",
-            "time": "2015-06-15 11:44:41"
+            "time": "2015-06-22 18:21:21"
         },
         {
             "name": "mustache/mustache",
@@ -560,16 +653,16 @@
         },
         {
             "name": "wp-cli/wp-cli",
-            "version": "v0.19.1",
+            "version": "v0.19.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/wp-cli.git",
-                "reference": "4734fc5c068af4c7de66e6710f118aa15463556e"
+                "reference": "b2db97324c03af1b9e847fb2f0cf2f81e23212c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/4734fc5c068af4c7de66e6710f118aa15463556e",
-                "reference": "4734fc5c068af4c7de66e6710f118aa15463556e",
+                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/b2db97324c03af1b9e847fb2f0cf2f81e23212c7",
+                "reference": "b2db97324c03af1b9e847fb2f0cf2f81e23212c7",
                 "shasum": ""
             },
             "require": {
@@ -614,7 +707,7 @@
                 "cli",
                 "wordpress"
             ],
-            "time": "2015-05-13 19:24:38"
+            "time": "2015-06-20 20:37:44"
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",

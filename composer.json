@@ -53,7 +53,10 @@
         "madebydavid/wizzie-theme": "master-dev",
         "madebydavid/acf-flexible-content": "master-dev",
         "madebydavid/acf-options-page": "master-dev",
-        "madebydavid/advanced-custom-fields-wpcli": "master-dev"
+        "madebydavid/advanced-custom-fields-wpcli": "master-dev",
+
+        "asimlqt/php-google-spreadsheet-client": "2.3.*",
+        "google/apiclient": "1.1.*"
         
     },
     "autoload": {
