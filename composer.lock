@@ -362,14 +362,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:madebydavid/wizziewizziewptheme.git",
-                "reference": "b6601311ed11cb9a7018bc7f56963ba03d8cd330"
+                "reference": "ef66cb9d34491a4ba10ffdf7a6f50ddc2444ad46"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
             "description": "Wizzie Wizzie WP theme",
-            "time": "2015-06-25 13:31:32"
+            "time": "2015-06-25 17:30:54"
         },
         {
             "name": "mustache/mustache",
