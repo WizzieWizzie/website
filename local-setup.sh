@@ -51,7 +51,7 @@ $wp post delete 2
 # import data
 $wp import ../../../../content/data/wizziewizzie.wordpress.2015-06-25.xml --authors=create
 
-# Add default Homa and News page
+# Add default Home and News page
 # Relies on the import data ids to be correct
 $wp option set show_on_front page
 $wp option set page_on_front 10
