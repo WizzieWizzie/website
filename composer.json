@@ -56,7 +56,10 @@
         "madebydavid/advanced-custom-fields-wpcli": "master-dev",
 
         "asimlqt/php-google-spreadsheet-client": "2.3.*",
-        "google/apiclient": "1.1.*"
+        "google/apiclient": "1.1.*",
+
+        "twig/twig": "1.18.*",
+        "swiftmailer/swiftmailer": "5.2.2"
         
     },
     "autoload": {
