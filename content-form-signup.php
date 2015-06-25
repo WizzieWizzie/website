@@ -7,7 +7,7 @@
             <?php the_field('intro'); ?>
         </div>
 
-        <form id="signUpForm" data-parsley-validate>
+        <form id="signUpForm" data-parsley-validate data-ajax-action="parent_signup">
 
             <div class="g-col-3">
 
