@@ -67,8 +67,9 @@ function wizzie_twig($templateDir) {
 	if (is_null($twig)) {
 		$twig = new Twig_Environment(
 			new Twig_Loader_Filesystem($templateDir), 
-			array()
+			array('debug' => true)
 		);
+		$twig->addExtension(new Twig_Extension_Debug());
 	}
 
 	return $twig;

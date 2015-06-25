@@ -16,6 +16,10 @@ function parent_signup_callback() {
 
     try {
 
+
+        $location = get_page_by_title($fields['student_location'], ARRAY_A, 'location');
+        $locationDetails = get_fields($location['ID']);
+
         $success = google_sheet_add_worksheet_row(
             GOOGLE_SHEET_PARENTS_SPREADSHEET_NAME,
             GOOGLE_SHEET_PARENTS_WORKSHEET_NAME,
@@ -41,7 +45,10 @@ function parent_signup_callback() {
             'W2C3 - Welcome', 
             $fields['parents_email'], 
             'parent-signup.twig',
-            $fields
+            array_merge(
+                $fields,
+                array('location' => $locationDetails)
+            )
         );
 
         wp_die('Many thanks for signing up, we will be in touch soon.');
@@ -87,7 +94,7 @@ function volunteer_signup_callback() {
         );
 
         wizzie_email_send(
-            'W2C3 - Welcome', 
+            'W2C3 - Volunteering Welcome', 
             $fields['volunteer_email'], 
             'volunteer-signup.twig',
             $fields
