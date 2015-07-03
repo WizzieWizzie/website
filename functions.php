@@ -11,6 +11,8 @@ require_once locate_template('/lib/admin.php');
 require_once locate_template('/lib/post-types.php');
 require_once locate_template('/lib/frontend.php');
 require_once locate_template('/lib/ajax.php');
+require_once locate_template('/lib/google-sheet.php');
+require_once locate_template('/lib/email.php');
 
 add_action( 'after_setup_theme',  'wizzie_setup' );
 add_action( 'wp_enqueue_scripts', 'wizzie_stylesheets' );

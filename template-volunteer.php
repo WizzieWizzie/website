@@ -80,7 +80,7 @@
                 The best place to get in touch with us is by using this form:
             </p> -->
 
-            <form id="volunteerForm" data-parsley-validate>
+            <form id="volunteerForm" data-parsley-validate data-ajax-action="volunteer_signup">
 
                 <p class="row">
                     <label for="volunteer_name">

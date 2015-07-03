@@ -281,13 +281,13 @@ WIZZ.formUI = function(){
             $('.bs-callout-warning').addClass('hidden');
 
             var data = {
-                action: 'parent_signup',
+                action: form.data('ajaxAction'),
                 data: form.serialize()
             };
 
             $.post(ajaxurl, data, function(response) {
                 alert(response);
-                location.reload();
+                //location.reload();
             });
             
         } else {
