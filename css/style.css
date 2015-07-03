@@ -59,11 +59,9 @@ li {
 .cf { zoom: 1; }
 
 /* Set default linkage */
+a { color: #30B7EF; }
 a:link { color: inherit; text-decoration: none; }
-a:visited { color: inherit; }
 a:hover { color: #000000; }
-a:focus { outline: none; }
-a:hover, a:active { outline: 0; }
 
 ul,
 ol,
@@ -153,15 +151,15 @@ Development Classes
 /* Typography - Rendering + Familys
 ------------------------------------------------------------*/
 body { /* LIGATURE RENDERING */
-	-webkit-font-feature-settings:"liga", "dlig";
-	   -moz-font-feature-settings:"liga=1, dlig=1";
-	    -ms-font-feature-settings:"liga", "dlig";
-	     -o-font-feature-settings:"liga", "dlig";
-	        font-feature-settings:"liga", "dlig";
-	 	font-feature-settings: "kern";
-  -webkit-font-feature-settings: "kern";
-  -moz-font-feature-settings: "kern";
-  -moz-font-feature-settings: "kern=1";
+	-webkit-font-feature-settings: "liga", "dlig";
+	   -moz-font-feature-settings: "liga=1, dlig=1";
+	    -ms-font-feature-settings: "liga", "dlig";
+	     -o-font-feature-settings: "liga", "dlig";
+	        font-feature-settings: "liga", "dlig";
+	   	    font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+       -moz-font-feature-settings: "kern";
+       -moz-font-feature-settings: "kern=1";
 /* 	        text-rendering: optimizeLegibility; */
 	        }
 
@@ -199,22 +197,29 @@ h1 { font-size: 54px; letter-spacing: 0.065em; line-height: 60px; display: inlin
     h1 span.green { background: #00db71; }
 
 
-h3 { font-size: 40px; line-height: 40px; margin-bottom: 40px; letter-spacing: 0.015em; }
+h2 { font-size: 40px; line-height: 40px; margin-bottom: 40px; letter-spacing: 0.015em; }
+
+h3 { font-size: 37px; line-height: 50px; margin-bottom: 25px; letter-spacing: 0.015em; font-weight: 600; }
 
 h4 { font-family: 'Roboto', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 12px; line-height: 20px; text-transform: inherit; }
 
-h4.form { font-size: 40px; line-height: 40px; margin-bottom: 40px; letter-spacing: 0.015em; font-family: 'Amatic SC', Helvetica, Arial, sans-serif; }
+h4.form { font-size: 40px; line-height: 40px; margin-bottom: 35px; letter-spacing: 0.015em; font-family: 'Amatic SC', Helvetica, Arial, sans-serif; }
 
 p,
 em, 
-ul { margin-bottom: 1.25em; font-size: 14px; line-height: 1.875em; color: rgb(0,0,0); }
+ul,
+ol { margin-bottom: 1.25em; font-size: 14px; line-height: 1.875em; color: rgb(0,0,0); }
 
 em { font-style: normal; font-weight: 400; }
 
-li { list-style: disc outside; }
+ul { }
+ul li { list-style: disc outside; margin-left: 20px;  }
+
+ol {}
+ol li {}
+ol[type="i"] li { list-style-type: lower-roman; }
 
 .kern-1 { margin-right: -0.05em; }
-
 .kern-2 { margin-right: -0.08em; }
 
 p.al-r { text-align: right; }
@@ -224,8 +229,7 @@ strong { font-weight: 500; }
 /* Disable webkit smoothing for readability */
 p,
 .intro-wrap h3,
-.form-generic,
-footer * { -webkit-font-smoothing: auto; }
+.form-generic { -webkit-font-smoothing: auto; }
 
 .holding { background: white; }
 
@@ -325,6 +329,12 @@ article header  { position: relative; }
 
 .nav-device ul.social-share li { margin: 0 auto; display: inline-block;  }
 
+.post-text { }
+
+    .post-text * + h2 { padding-top: 60px; }
+
+    .post-text li { margin-left: 20px; }
+
 /*
 
 WP Template specific
@@ -378,15 +388,15 @@ section { width: 100%; padding: 0 60px; }
 
 	section[data-pattern="divide"]:before   { background: transparent url("../images/patterns/ww_pattern_divide2.png") repeat scroll 0 0; background-attachment: fixed; }
 
-    section .post-text { background: rgb(255,255,255); padding: 40px 60px; overflow: hidden; }
+    section .post-text { background: white; padding: 40px 60px; overflow: hidden; }
 
 /* Intro wrap */
-.intro-wrap { background: rgb(255,255,255); margin: 0 -60px; padding: 80px 60px; overflow: hidden; }
+.intro-wrap { background: white; margin: 0 -60px; padding: 80px 60px 45px; overflow: hidden; }
 
 .intro-wrap .text { padding: 0 40px; }
 
 /* News section */
-.news { background: #e1e1e1; padding: 60px 40px; overflow: hidden; }
+.news { background: #e1e1e1; padding: 80px 40px 40px 40px; overflow: hidden; }
 
 	.news-item { padding: 0 20px; width: 33.333%; float: left; margin-bottom: 40px; z-index: 100; }
 
@@ -405,14 +415,12 @@ section { width: 100%; padding: 0 60px; }
 
     .news-item a.more { font-weight: 500; display: block; margin-top: 40px; }
 
-/* Single News Page */
+.generic-page { padding: 0px; }
 
-.news-single { padding: 0px; }
-
-    .news-single header { padding: 0px; }
+    .generic-page header { padding: 0px; }
 
 /* Volunteer section */
-.module-quote { overflow: hidden; padding: 60px; }
+.module-quote { overflow: hidden; padding: 80px; }
 
 	.module-quote blockquote { display: table-cell; color: black; padding: 60px 40px; font-size: 33px; line-height: 41px; font-weight: 100; float: none; vertical-align: middle; }
 
@@ -493,11 +501,6 @@ section { width: 100%; padding: 0 60px; }
 
     .form-generic p { position: relative; }
 
-    .form-generic p + h3,
-    .form-generic ul + h3  { padding-top: 40px; }
-
-    .form-generic ul { }
-    .form-generic ul li { margin-left: 20px; }
     .form-generic em { margin-bottom: 16px; }
 
     .form-generic label { font-weight: 500; }
@@ -519,6 +522,7 @@ section { width: 100%; padding: 0 60px; }
         width: 100%;
         height: 40px;
         -webkit-appearance: none;
+        -moz-appearance: none;
         padding: 0px 10px;
         background: #fdfdfd url('../images/svg/ui.svg') no-repeat scroll 0 0;
         background-position: right -85px;
@@ -582,7 +586,7 @@ section { width: 100%; padding: 0 60px; }
         position: absolute;
         top: 0px;
         right: 0px;
-        color: #ff1c85;
+        color: red;
         font-weight: 500;
         font-size: 14px;
     }
@@ -616,7 +620,7 @@ section { width: 100%; padding: 0 60px; }
 
     .map ul { padding: 60px 20px; }
 
-    .map ul li { cursor: pointer; padding-left: 60px; border-right: 1px solid #e5e5e5; height: 210px; }
+    .map ul li { cursor: pointer; padding-left: 60px; border-right: 1px solid #e5e5e5; height: 210px; list-style: none; }
 
     .map ul li h3 { color: #00d668; font-weight: 600; }
 
@@ -706,9 +710,9 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
 	}
 
 
-.shad-in { box-shadow: inset 0px 6px 6px -6px rgba(0,0,0,0.1); } /* -webkit-box-shadow: inset 0px 6px 6px -6px rgba(0,0,0,0.1); -moz-box-shadow: inset 0px 6px 6px -6px rgba(0,0,0,0.1);  */
-.shad-up { box-shadow: 0px -6px 6px -6px rgba(0,0,0,0.1); } /* -webkit-box-shadow: 0px -6px 6px -6px rgba(0,0,0,0.2); -moz-box-shadow: 0px -6px 6px -6px rgba(0,0,0,0.2);  */
-.shad-down { box-shadow: 0px 4px 4px -4px rgba(0,0,0,0.1); } /* -webkit-box-shadow: 0px 4px 4px -4px rgba(0,0,0,0.1); -moz-box-shadow: 0px 4px 4px -4px rgba(0,0,0,0.1); */
+.shad-in { box-shadow: inset 0px 6px 6px -6px rgba(0,0,0,0.2); } /* -webkit-box-shadow: inset 0px 6px 6px -6px rgba(0,0,0,0.1); -moz-box-shadow: inset 0px 6px 6px -6px rgba(0,0,0,0.1);  */
+.shad-up { box-shadow: 0px -6px 6px -6px rgba(0,0,0,0.2); } /* -webkit-box-shadow: 0px -6px 6px -6px rgba(0,0,0,0.2); -moz-box-shadow: 0px -6px 6px -6px rgba(0,0,0,0.2);  */
+.shad-down { box-shadow: 0px 4px 4px -4px rgba(0,0,0,0.2); } /* -webkit-box-shadow: 0px 4px 4px -4px rgba(0,0,0,0.1); -moz-box-shadow: 0px 4px 4px -4px rgba(0,0,0,0.1); */
 
 
 .ani-col500 {
@@ -778,6 +782,10 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
 	h3 {font-size: 40px; line-height: 40px; margin-bottom: 20px; letter-spacing: 0.015em; }
 
 
+    .intro-wrap .text {
+        padding-bottom: 10px;
+    }
+
 	section { width: 100%; padding: 0 40px; }
     section .post-text { padding: 40px; }
 
@@ -799,10 +807,10 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
     	.intro-wrap { background: rgb(255,255,255); margin: 0 -40px; padding: 40px 20px;  }
 
 
-    /* Single News Item */
-    .news-single { }
+    /* Generic Page */
+    .generic-page { }
 
-        .news-single .g-col-2 { padding: 0px; }
+        .generic-page .g-col-2 { padding: 0px; }
 
     /* Volunteer section */
     .module-quote  {}
@@ -856,7 +864,8 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
 	.nav-device ul.social-share { margin-left: 70px; padding: 0; border-left: none; }
 
 	section { padding: 0 20px; }
-    section .post-text { padding: 40px; } .post-text { padding: 20px; }
+    section .post-text { padding: 20px; } 
+    
     
 	/* Intro */
 	.intro-wrap { background: rgb(255,255,255); margin: 0 -20px; padding: 40px 20px;  }
@@ -866,9 +875,6 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
     .news { background: #e1e1e1; padding: 60px 10px; overflow: hidden; }
 
     	.news-item { padding: 0 10px; margin-bottom: 40px; width: 100%; float: none; }
-
-    /* Single News Item */
-    .news-single { }
 
     /* Signup Section */
     .form-generic { padding: 60px 0px; }

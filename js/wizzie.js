@@ -10,80 +10,80 @@ MODI_ 00.00.00
 
 jQuery(function($){
 
-	'use strict';
+    'use strict';
 
-	var WIZZ = window.WIZZ || {};
+    var WIZZ = window.WIZZ || {};
 
 
 /* GLOBAL: Lets cache a few bits 'n' bobs!
 ---------------------------------------------------------------------------------------------------- */
 var $window = $(window),
-	$document = $(document),
-	$html = $('html'),
-	$body = $('body'),
+    $document = $(document),
+    $html = $('html'),
+    $body = $('body'),
 
-	$viewport = $('.vp-wrapper'),
-	$header = $('header'),
-	isNavopen = false,
-	//isNavopen = false,
-	//var isTouch = Modernizr.touch? true : false;
-	winW,
-	winH,
-	vportW,
-	vportH;
+    $viewport = $('.vp-wrapper'),
+    $header = $('header'),
+    isNavopen = false,
+    //isNavopen = false,
+    //var isTouch = Modernizr.touch? true : false;
+    winW,
+    winH,
+    vportW,
+    vportH;
 
-	var ease01 = 'easeInOutQuart',
-		ease02 = 'easeOutBounce',
-		ease03 = 'easeInOutExpo';
+    var ease01 = 'easeInOutQuart',
+        ease02 = 'easeOutBounce',
+        ease03 = 'easeInOutExpo';
 
-	var cubic01 = [0.33,1,0.33,1];
-	var cubic02 = [0.175, 0.885, 0.32, 1.275];
+    var cubic01 = [0.33,1,0.33,1];
+    var cubic02 = [0.175, 0.885, 0.32, 1.275];
 
 
 /* GLOBAL: Plugins
 ---------------------------------------------------------------------------------------------------- */
 $.fn.obfuscateEmail = function (className, title) {
 
-	return $(this).find("." + className).each(function () {
+    return $(this).find("." + className).each(function () {
 
-		var self = $(this);
+        var self = $(this);
 
-		var protect = self.text().replace(" [at] ", "&#64;").replace(" [dotty] ", ".");
+        var protect = self.text().replace(" [at] ", "&#64;").replace(" [dotty] ", ".");
 
-		self.html("<a href=\"mailto:" + protect + "?subject=" + title + "\"class=\"ani-col500\">" + protect + "</a>");
+        self.html("<a href=\"mailto:" + protect + "?subject=" + title + "\"class=\"ani-col500\">" + protect + "</a>");
 
-	});
+    });
 };
 
 $.fn.animationEnd = function(callback) {
 
-	return this.each(function() {
+    return this.each(function() {
 
-		var $this = $(this);
+        var $this = $(this);
 
-		$this.one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() { // CHANGED TO ONE INSTEAD OF BIND
+        $this.one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() { // CHANGED TO ONE INSTEAD OF BIND
 
-			if (typeof callback == 'function') {
+            if (typeof callback == 'function') {
 
-				callback.call(this);
-			}
-		});
-	});
+                callback.call(this);
+            }
+        });
+    });
 };
 
 
 WIZZ.viewport = function() {
-	var vp = window,
-		obj = 'inner';
+    var vp = window,
+        obj = 'inner';
 
-	if (!('innerWidth' in window)) {
-		obj = 'client';
-		vp = document.documentElement || document.body;
-	}
-	return {
-		width: vp[obj + 'Width'],
-		height: vp[obj + 'Height']
-	};
+    if (!('innerWidth' in window)) {
+        obj = 'client';
+        vp = document.documentElement || document.body;
+    }
+    return {
+        width: vp[obj + 'Width'],
+        height: vp[obj + 'Height']
+    };
 };
 
 
@@ -101,113 +101,113 @@ var MenuClone_mobile = $('.main').clone().attr('class', 'nav-device');
 
 WIZZ.deviceNav = function() {
 
-	if( WIZZ.viewport().width < 1024 ) {
+    if( WIZZ.viewport().width < 1024 ) {
 
-	$('body').addClass('device-sm');
+    $('body').addClass('device-sm');
 
-	if( $('.device-menu').length > 0 ) {
+    if( $('.device-menu').length > 0 ) {
 
-			$viewport.before(MenuClone_mobile);
+            $viewport.before(MenuClone_mobile);
 
-			//deviceWrap.insertBefore('.nav-touch-btn');
+            //deviceWrap.insertBefore('.nav-touch-btn');
 
-			//deviceWrap.prepend(MenuClone_mobile);
+            //deviceWrap.prepend(MenuClone_mobile);
 
-			//deviceWrap.parent().addClass('device');
+            //deviceWrap.parent().addClass('device');
 
-			//console.log("mobile menu");
-		};
+            //console.log("mobile menu");
+        };
 
-	} else {
+    } else {
 
-		$('body').removeClass('device-sm');
+        $('body').removeClass('device-sm');
 
-		$('.device-menu').removeClass('open');
+        $('.device-menu').removeClass('open');
 
-		//MenuClone_mobile.remove();
+        //MenuClone_mobile.remove();
 
-		$([$header, $viewport]).each(function(){
+        $([$header, $viewport]).each(function(){
 
-			$(this).velocity("stop").velocity({
-				right : 0
-			}, {
-				duration: 600,
-				easing: cubic01
+            $(this).velocity("stop").velocity({
+                right : 0
+            }, {
+                duration: 600,
+                easing: cubic01
 
-			});
+            });
 
-		});
+        });
 
-		MenuClone_mobile.remove();
+        MenuClone_mobile.remove();
 
-		isNavopen = false;
-	}
+        isNavopen = false;
+    }
 }
 
 WIZZ.goneMobile = function() {
 
-	var $deviceIcon = $('.device-menu'),
-		//mobileNavOpen = false,
-		smlScreen = 600,
-		medScreen = 800,
-		//isNavopen = false,
-		navWidth;
+    var $deviceIcon = $('.device-menu'),
+        //mobileNavOpen = false,
+        smlScreen = 600,
+        medScreen = 800,
+        //isNavopen = false,
+        navWidth;
 
 
-	$deviceIcon.on('click', function(evt) { //$('.nav-touch-btn').fastClick(function(evt) {
+    $deviceIcon.on('click', function(evt) { //$('.nav-touch-btn').fastClick(function(evt) {
 
-		var self = $(this);
+        var self = $(this);
 
-		evt.preventDefault();
+        evt.preventDefault();
 
-		self.toggleClass('open');
-
-
-		// Grab current viewport width and amend the device nav display
-		if(WIZZ.viewport().width <= smlScreen) {
-
-			var navWidth = Math.round(WIZZ.viewport().width - 70);
-
-		} else {
-
-			var navWidth = "50%";
-
-		}
-
-		if (!isNavopen) { //$deviceIcon.hasClass('open') &&
-
-			//$body.addClass('no-scroll');
-
-			$([$header, $viewport]).each(function(){
-
-				$(this).velocity("stop").velocity({
-					right : navWidth
-				}, {
-					duration: 600,
-					easing: cubic02
-				});
-
-			});
-
-			isNavopen = true;
+        self.toggleClass('open');
 
 
-		} else if(isNavopen) {
+        // Grab current viewport width and amend the device nav display
+        if(WIZZ.viewport().width <= smlScreen) {
 
-			$([$header, $viewport]).each(function(){
+            var navWidth = Math.round(WIZZ.viewport().width - 70);
 
-				$(this).velocity("stop").velocity({
-					right : 0
-				}, {
-					duration: 600,
-					easing: cubic01
-				});
+        } else {
 
-			});
+            var navWidth = "50%";
 
-			isNavopen = false;
-		}
-	});
+        }
+
+        if (!isNavopen) { //$deviceIcon.hasClass('open') &&
+
+            //$body.addClass('no-scroll');
+
+            $([$header, $viewport]).each(function(){
+
+                $(this).velocity("stop").velocity({
+                    right : navWidth
+                }, {
+                    duration: 600,
+                    easing: cubic02
+                });
+
+            });
+
+            isNavopen = true;
+
+
+        } else if(isNavopen) {
+
+            $([$header, $viewport]).each(function(){
+
+                $(this).velocity("stop").velocity({
+                    right : 0
+                }, {
+                    duration: 600,
+                    easing: cubic01
+                });
+
+            });
+
+            isNavopen = false;
+        }
+    });
 };
 
 
@@ -216,11 +216,11 @@ WIZZ.goneMobile = function() {
 ---------------------------------------------------------------------------------------------------- */
 WIZZ.bobbleBobs = function(items, trigger) {
 
-	// Make a random position between 0-80%
-	// Fire when first called, then again when bobble is hidden
-	var randomPos = Math.floor(Math.random() * 80) + 1;
+    // Make a random position between 0-80%
+    // Fire when first called, then again when bobble is hidden
+    var randomPos = Math.floor(Math.random() * 80) + 1;
 
-	items.each(function() {
+    items.each(function() {
     var osElement = $(this),
         osAnimationDelay = osElement.attr('data-os-animation-delay');
 
@@ -228,33 +228,33 @@ WIZZ.bobbleBobs = function(items, trigger) {
         '-webkit-animation-delay':  osAnimationDelay,
         '-moz-animation-delay':     osAnimationDelay,
         'animation-delay':          osAnimationDelay,
-        'left':						randomPos + '%'
+        'left':                     randomPos + '%'
     });
 
     var osTrigger = (trigger) ? trigger : osElement;
 
-	osTrigger.waypoint(function(direction) {
-	    if(direction === 'down') {
-	    	osElement.addClass('howdy');
+    osTrigger.waypoint(function(direction) {
+        if(direction === 'down') {
+            osElement.addClass('howdy');
 
-	    }
-	},{
-	    //triggerOnce: true,
-	    offset: '90%'
-	});
+        }
+    },{
+        //triggerOnce: true,
+        offset: '90%'
+    });
 
-	osTrigger.waypoint(function(direction) {
-	    if(direction === 'down') {
-	    	var randomPos = Math.floor(Math.random() * 80) + 1;
-	    	osElement.removeClass('howdy').animationEnd(function(){
-	    	osElement.css({'left': randomPos + '%'});
-			});
-		}
-	},{
-	    //triggerOnce: true,
-	    offset: '30%'
-	});
-	});
+    osTrigger.waypoint(function(direction) {
+        if(direction === 'down') {
+            var randomPos = Math.floor(Math.random() * 80) + 1;
+            osElement.removeClass('howdy').animationEnd(function(){
+            osElement.css({'left': randomPos + '%'});
+            });
+        }
+    },{
+        //triggerOnce: true,
+        offset: '30%'
+    });
+    });
 };
 
 /* SETUP FORM INTERACTIONS / VALIDATIONS
@@ -280,7 +280,7 @@ WIZZ.formUI = function(){
             $('.bs-callout-info').removeClass('hidden');
             $('.bs-callout-warning').addClass('hidden');
 
-    	    var data = {
+            var data = {
                 action: 'parent_signup',
                 data: form.serialize()
             };
@@ -300,7 +300,7 @@ WIZZ.formUI = function(){
     };
 
     $('.form-generic').on('click', 'input[type=submit]', function () {
-    	var form = $(this).closest('form');
+        var form = $(this).closest('form');
         form.parsley().validate();
         // Stop the Form from submitting
         return validateFront(form);
@@ -349,14 +349,15 @@ WIZZ.quotesSlider = function(){
     var $last;
     var $current = $sponsorsList.find('li:last-of-type');
 
-    $('.module-sponsors').on('click', 'a[data-next]', function(){
+    $sponsors.on('click', 'a[data-next]', function() {
 
         $sponsorsList.velocity({
             left: "+=" + $current.outerWidth(),
         }, {
             duration: 450,
             easing: [0.7, 0.135, 0.15, 0.86],
-            complete: function(){
+
+            complete: function() {
 
                 $last = $current;
                 $current = $current.prev('li');
@@ -366,38 +367,41 @@ WIZZ.quotesSlider = function(){
                      .velocity({ opacity: 1 }, 300)
 
                 $sponsorsList.css('left', 0);
-
             }
-
         });
 
         return false;
     })
-
 }
 
+/* Responsive Video
+---------------------------------------------------------------------------------------------------- */
+WIZZ.responsiveVideos = function(){
+    $('main').fitVids();
+}
 
 /* Fire this puppy up...
 ---------------------------------------------------------------------------------------------------- */
 $(function() {
 
-	WIZZ.deviceNav();
-	WIZZ.goneMobile();
-	WIZZ.bobbleBobs($('.bobble-bob'));
+    WIZZ.deviceNav();
+    WIZZ.goneMobile();
+    WIZZ.bobbleBobs($('.bobble-bob'));
     WIZZ.formUI();
     WIZZ.owlSlider();
     WIZZ.mapInteractions()
     WIZZ.quotesSlider()
+    WIZZ.responsiveVideos()
 
-	// For dev purpose
-	// console.log(WIZZ.viewport().width);
-	//$('body').obfuscateEmail('obfuscate', 'Website enquiry');
+    // For dev purpose
+    // console.log(WIZZ.viewport().width);
+    //$('body').obfuscateEmail('obfuscate', 'Website enquiry');
 
-	// Use debounce in production as this is way too funky!
-	$(window).resize(function() {
-		WIZZ.deviceNav();
-		WIZZ.viewport();
-	});
+    // Use debounce in production as this is way too funky!
+    $(window).resize(function() {
+        WIZZ.deviceNav();
+        WIZZ.viewport();
+    });
 });
 
 

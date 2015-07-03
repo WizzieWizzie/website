@@ -32,6 +32,8 @@ function wizzie_setup(){
         'primary' => 'Primary Navigation'
     ));
 
+    add_theme_support('title-tag');
+
     // add_theme_support( 'post-thumbnails', array( /*'post',*/ 'gallery' ) );
     // add_image_size( 'mm-medium', 772, 482, array('center', 'center') );
     
@@ -105,11 +107,14 @@ function wizzie_scripts(){
     wp_register_script('gmaps',       get_template_directory_uri().'/js/map.js'                                            , array('gmapsapi'), '1.0.0', true);
     wp_register_script('parsley',     get_template_directory_uri().'/js/parsley/parsley.min.js'               , array('jquery'), null   , true);
     wp_register_script('velocity',    get_template_directory_uri().'/js/vendor/velocity.min.js'               , array('jquery'), null   , true);
+    wp_register_script('fitvids',     get_template_directory_uri().'/js/vendor/jquery.fitvids.js'             , array('jquery'), null   , true);
+
 
     wp_enqueue_script('modernizr');
     wp_enqueue_script('plugins');
     wp_enqueue_script('migrate');
     wp_enqueue_script('velocity');
+    wp_enqueue_script('fitvids');
     wp_enqueue_script('wizzie');
 
     /*

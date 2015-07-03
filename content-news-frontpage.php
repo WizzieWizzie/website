@@ -1,6 +1,6 @@
 <!-- News -->
 
-<section class="news shad-in" data-pattern="slash">
+<section class="news shad-in" data-pattern="multiply">
 
     <!-- <div class="bobble-bob facedown" data-os-animation-delay="0.3"></div> -->
 

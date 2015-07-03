@@ -5,23 +5,11 @@
     <article>
 
        <header>
-
-           <section class="intro gradient" data-pattern="multiply">
-
+           <section class="intro gradient" data-pattern="plus">
                 <div class="g-row">
-                    <h1>
-                        <span class="red">
-                            <time datetime="<?php echo get_the_date('Y-m-d'); ?>">
-                                <?php echo get_the_date('d F Y'); ?>
-                            </time>
-                        </span>
-                        <br />
-                        <span class="blue"><?php the_title(); ?></span><br />
-                    </h1>
+                    <h1><span class="blue"><?php the_title(); ?></span><br /></h1>
                 </div>
-
             </section>
-
         </header>
 
         <div class="post-text">

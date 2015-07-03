@@ -10,36 +10,38 @@
  * Does nice things to the wordpress title,
  * Mostly regarding the pagination
 */
-function fix_wp_title($title){
+function fix_wp_title($title_parts){
 
-    global $wp_query;
 
-    $page_nr = get_query_var('paged');
+    var_dump($title_parts);
 
-    if ($page_nr) {
+    // global $wp_query;
+    //
+    // $page_nr = get_query_var('paged');
+    //
+    // if ($page_nr) {
+    //
+    //     if (get_query_var('category_name')) {
+    //         $newTitle = ucfirst(get_query_var('category_name'))." / " . $page_nr;
+    //     } else {
+    //         $newTitle = "News / " . $page_nr;
+    //     }
+    //
+    //     $title[0] = $newTitle;
+    //
+    // } else if (is_front_page()){
+    //
+    //     $title[0] = 'Wizzie Wizzie | London Computer Coding Club';
+    //
+    // }
 
-        if (get_query_var('category_name')) {
-            $newTitle = ucfirst(get_query_var('category_name'))." / " . $page_nr;
-        } else {
-            $newTitle = "News / " . $page_nr;
-        }
-
-        $title[0] = $newTitle;
-
-    } else if (is_front_page()){
-
-        $title[0] = 'Wizzie Wizzie | London Computer Coding Club';
-
-    }
-
-    return $title;
+    return false;
 }
 
 function wizzie_wp_title(){
-    add_filter('wp_title_parts', 'fix_wp_title');
-    echo wp_title( '| Wizzie Wizzie | London Computer Coding Club', true, 'right' );
+    add_filter('wp_title_parts', 'fix_wp_title', 99, 1);
+    wp_title( '| Wizzie Wizzie | London Computer Coding Club', true, 'right' );
 }
-
 
 // -----------------------------------------------------------------
 //    BODY:CLASS
