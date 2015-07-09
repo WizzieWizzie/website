@@ -626,7 +626,7 @@ section { width: 100%; padding: 0 60px; }
 
     .map ul li p { font-size: 13px; line-height: 1.575em; letter-spacing: 0.05em; }
 
-    .map .google-acfmap { width: 100%; border: #ccc solid 1px; height: 0px; padding-bottom: 50%; }
+    .map .google-acfmap { width: 100%; border: #ccc solid 1px; height: 0px; padding-bottom: 30%; min-height: 400px; }
 
     .map .google-acfmap h3 { color: #00d668; margin-bottom: 10px; }
 

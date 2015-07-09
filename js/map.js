@@ -82,9 +82,7 @@
 
         // add markers
         $markers.each(function(){
-
             add_marker( $(this), map );
-
         });
 
         // center map
@@ -205,6 +203,7 @@
 
     function moveToLocation(lat, lng){
         var center = new google.maps.LatLng(lat, lng);
+        map.setZoom( 15 );
         map.panTo(center);
     }
 
