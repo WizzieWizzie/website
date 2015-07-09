@@ -4,13 +4,13 @@
 
     <!-- <div class="bobble-bob facedown" data-os-animation-delay="0.3"></div> -->
 
-    <div class="g-row cf">
+    <div class="sliding-news g-row cf">
 
         <?php
 
             $args = array(
                 'post_type'      => 'post',
-                'posts_per_page' => 4,
+                'posts_per_page' => -1,
                 'orderby'        => 'date',
                 'order'          => 'DESC'
             );

@@ -226,7 +226,7 @@ add_filter('intermediate_image_sizes_advanced', 'filter_image_sizes');
  * Normal-Word based Excerpt Length
 */
 function custom_excerpt_length($length) {
-    return 68;
+    return 30;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -234,7 +234,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
  * Readmore
 */
 function custom_excerpt_more($more) {
-    return '<a href="'.get_the_permalink().'" class="more">Read more...</a>';
+    return ""; # '<a href="'.get_the_permalink().'" class="more">Read more...</a>';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
 
