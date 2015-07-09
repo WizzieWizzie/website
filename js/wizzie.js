@@ -315,6 +315,27 @@ WIZZ.formUI = function(){
 ---------------------------------------------------------------------------------------------------- */
 WIZZ.owlSlider = function(){
 
+    /*
+        NEWS
+    */
+
+    $(".sliding-news").owlCarousel({
+        items: 3,
+        navigation: false,
+        pagination: true,
+        itemsDesktop : [1000,3],     // x items between 1000px and 901px
+        itemsDesktopSmall : [900,2], // x betweem 900px and 601px
+        itemsTablet: [600,1],        // x items between 600 and 0
+        itemsMobile : [600,1],       // itemsMobile disabled - inherit from itemsTablet option
+        afterInit: function(elem){
+            WIZZ.sameHeightBlogItems();
+        }
+    });
+
+    /*
+        MAPS LOCATIONS
+    */
+
     if ($("section.map ul").length) {
 
         $("section.map ul").owlCarousel({
@@ -374,6 +395,37 @@ WIZZ.quotesSlider = function(){
     })
 }
 
+/*
+    YES
+*/
+WIZZ.sameHeightBlogItems = function(){
+
+    if ( $('.news-item').length >= 1 ){
+
+        var highest   = 0,
+            $articles = $('.news-item');
+
+        // Reset height
+        $articles.height('auto');
+
+        // Find tallest
+        $.each( $articles, function(){
+
+            console.log($(this).height());
+
+            if ( $(this).outerHeight() > highest ) {
+                highest = $(this).outerHeight();
+                ;
+            }
+        })
+
+        // Apply height to all articles
+        $articles.height(highest);
+
+    }
+
+}
+
 /* Responsive Video
 ---------------------------------------------------------------------------------------------------- */
 WIZZ.responsiveVideos = function(){
@@ -389,9 +441,10 @@ $(function() {
     WIZZ.bobbleBobs($('.bobble-bob'));
     WIZZ.formUI();
     WIZZ.owlSlider();
-    WIZZ.mapInteractions()
-    WIZZ.quotesSlider()
-    WIZZ.responsiveVideos()
+    WIZZ.mapInteractions();
+    WIZZ.quotesSlider();
+    WIZZ.responsiveVideos();
+    // WIZZ.sameHeightBlogItems();
 
     // For dev purpose
     // console.log(WIZZ.viewport().width);
@@ -401,6 +454,7 @@ $(function() {
     $(window).resize(function() {
         WIZZ.deviceNav();
         WIZZ.viewport();
+        WIZZ.sameHeightBlogItems();
     });
 });
 

@@ -111,13 +111,13 @@ function wizzie_scripts(){
     wp_register_script('velocity',    get_template_directory_uri().'/js/vendor/velocity.min.js'               , array('jquery'), null   , true);
     wp_register_script('fitvids',     get_template_directory_uri().'/js/vendor/jquery.fitvids.js'             , array('jquery'), null   , true);
 
-
     wp_enqueue_script('modernizr');
     wp_enqueue_script('plugins');
     wp_enqueue_script('migrate');
     wp_enqueue_script('velocity');
     wp_enqueue_script('fitvids');
     wp_enqueue_script('wizzie');
+    wp_enqueue_script('owl');
 
     /*
         Select Javascript loading
@@ -126,7 +126,7 @@ function wizzie_scripts(){
     if ($template == 'template-when') {
         wp_enqueue_script('gmapsapi');
         wp_enqueue_script('gmaps');
-        wp_enqueue_script('owl');
+        # wp_enqueue_script('owl');
     }
 
     if ($template == 'template-signup' || $template == 'template-volunteer') {
