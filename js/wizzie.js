@@ -409,11 +409,12 @@ WIZZ.quotesSlider = function(){
 
     var $sponsors = $('.module-sponsors');
     var $sponsorsList = $('.module-sponsors ul');
+    var $sponsorsListNext = $('.module-sponsors a[data-next]')
 
     var $last;
     var $current = $sponsorsList.find('li:last-of-type');
 
-    $sponsors.on('click', 'a[data-next]', function() {
+    $sponsors.on('click', $sponsorsListNext, function() {
 
         $sponsorsList.velocity({
             left: "+=" + $current.outerWidth(),
@@ -436,6 +437,29 @@ WIZZ.quotesSlider = function(){
 
         return false;
     })
+
+    /*
+        NEXT BUTTON
+    */
+
+    $(window).on("debouncedresize", function(){
+        showHideButton();
+    })
+
+    /*
+       Determine if the width of all logos fits on the current screen
+       Enable the 'next' button if they don't fit
+    */
+    function showHideButton(){
+
+        if ( ($sponsors.width() - $('.module-sponsors h3').width()) < $sponsorsList.width()) {
+            $sponsorsListNext.fadeIn('slow');
+        } else {
+            $sponsorsListNext.fadeOut('slow');
+        }
+
+    }
+
 }
 
 /*

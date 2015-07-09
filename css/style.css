@@ -832,10 +832,12 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
         .module-sponsors .g-row { display: block; }
 
         .module-sponsors h3 { width: 100%; display: block; text-align: center; padding: 60px 40px; }
-        .module-sponsors a[data-next] { transform: translateX(0px); bottom: 31px; top: initial; left: 15px; }
-        .module-sponsors .wrap { height: 110px; position: relative; }
-        .module-sponsors .wrap ul { padding-left: 40px; }
-        .module-sponsors .wrap ul li { padding: 10px 30px; }
+        .module-sponsors a[data-next] { display: none !important; }
+        .module-sponsors .wrap { position: relative; width: 100%; }
+        .module-sponsors .wrap ul { position: relative; margin: 0 auto; padding-bottom: 10px; }
+        .module-sponsors .wrap ul li { padding:5px; display: block; margin: 0px; text-align: center; border-bottom: 1px solid #F9F8F8; }
+        .module-sponsors .wrap ul li:last-of-type { border-bottom: 0px; }
+        .module-sponsors .wrap ul li a { display: inline-block; }
 
     /* Signup Section */
     .form-generic { padding: 60px 10px 60px 30px; }
