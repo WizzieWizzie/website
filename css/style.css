@@ -59,8 +59,7 @@ li {
 .cf { zoom: 1; }
 
 /* Set default linkage */
-a { color: #30B7EF; }
-a:link { color: inherit; text-decoration: none; }
+a { color: #30B7EF; text-decoration: none; }
 a:hover { color: #000000; }
 
 ul,
@@ -391,9 +390,7 @@ section { width: 100%; padding: 0 60px; }
     section .post-text { background: white; padding: 40px 60px; overflow: hidden; }
 
 
-.readMore { 
-    font-weight: bold;
-}
+.readMore { font-weight: 500; }
 
 /* Intro wrap */
 .intro-wrap { background: white; margin: 0 -60px; padding: 80px 60px 45px; overflow: hidden; }
@@ -403,20 +400,22 @@ section { width: 100%; padding: 0 60px; }
 /* News section */
 .news { background: #e1e1e1; padding: 80px 40px 40px 40px; overflow: hidden; }
 
-	.news-item { padding: 0 20px; width: 33.333%; float: left; margin-bottom: 40px; z-index: 100; }
+	.news-item { padding: 0 20px 20px 20px; width: 33.333%; float: left; margin-bottom: 40px; z-index: 100; }
 
     .news-item time,
     .news-item h3 { font-weight: 600; }
 
 	.news-item:last-child { margin: 0; }
 
-	.news-item article { background: rgb(255,255,255); padding: 60px 40px; box-shadow: -5px 5px 0px 0px rgba(0,0,0,0.05); }
+	.news-item article { position: relative; overflow: hidden; background: rgb(255,255,255); padding: 60px 40px; box-shadow: -5px 5px 0px 0px rgba(0,0,0,0.05); }
 
 	.news-item:first-of-type article:before { content: "NEW"; line-height: 80px; text-align: center; color: #FFF; position: absolute; top: 10px; right: 10px; width: 80px; height: 80px; border-radius: 40px; background: #FFCC00; }
 
 	.news-item time { font-size: 40px; line-height: 40px; color: #30b7ef; margin-bottom: 5px; display: block; }
 
-    .news-item a.more { font-weight: 500; display: block; margin-top: 40px; }
+    .news-item a.readMore { display: block; margin-top: 40px; position: absolute; bottom: 40px; }
+
+.sliding-news.owl-carousel .news-item { width: 100%; }
 
 .generic-page { padding: 0px; }
 
@@ -800,7 +799,7 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
     /* News section */
     .news { background: #e1e1e1; padding: 60px 20px; overflow: hidden; }
 
-    	.news-item { padding: 0 20px; width: 100%; float: left; margin-bottom: 40px; }
+    	.news-item { width: 100%; float: left; margin-bottom: 40px; }
 
         .news-item article { height: auto; }
 
@@ -874,7 +873,7 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
     /* News section */
     .news { background: #e1e1e1; padding: 60px 10px; overflow: hidden; }
 
-    	.news-item { padding: 0 10px; margin-bottom: 40px; width: 100%; float: none; }
+    	.news-item { padding-left: 10px; padding-right: 10px; margin-bottom: 40px; width: 100%; float: none; }
 
     /* Signup Section */
     .form-generic { padding: 60px 0px; }
@@ -889,30 +888,3 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
     .module-sponsors h3 { padding-top: 40px; padding-bottom: 40px; }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.sliding-news.owl-carousel { }
-.sliding-news.owl-carousel .news-item { width: 100%; }
-.sliding-news.owl-carousel .owl-controls { top: 45%; overflow: hidden; height: 50px; }
-.sliding-news.owl-carousel .owl-controls .owl-prev { position: absolute; left: 0px; }
-.sliding-news.owl-carousel .owl-controls .owl-buttons .owl-next { position: absolute; right: 0px; }
-.sliding-news.owl-carousel .owl-wrapper-outer { padding-bottom: 10px; }

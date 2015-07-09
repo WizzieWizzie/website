@@ -86,7 +86,53 @@ WIZZ.viewport = function() {
     };
 };
 
+/*
+ * debouncedresize: special jQuery event that happens once after a window resize
+ *
+ * latest version and complete README available on Github:
+ * https://github.com/louisremi/jquery-smartresize
+ *
+ * Copyright 2012 @louis_remi
+ * Licensed under the MIT license.
+ *
+ * This saved you an hour of work?
+ * Send me music http://www.amazon.co.uk/wishlist/HNTU0468LQON
+ */
+(function($) {
 
+var $event = $.event,
+	$special,
+	resizeTimeout;
+
+$special = $event.special.debouncedresize = {
+	setup: function() {
+		$( this ).on( "resize", $special.handler );
+	},
+	teardown: function() {
+		$( this ).off( "resize", $special.handler );
+	},
+	handler: function( event, execAsap ) {
+		// Save the context
+		var context = this,
+			args = arguments,
+			dispatch = function() {
+				// set correct event type
+				event.type = "debouncedresize";
+				$event.dispatch.apply( context, args );
+			};
+
+		if ( resizeTimeout ) {
+			clearTimeout( resizeTimeout );
+		}
+
+		execAsap ?
+			dispatch() :
+			resizeTimeout = setTimeout( dispatch, $special.threshold );
+	},
+	threshold: 150
+};
+
+})(jQuery);
 
 /* ------------------------------------------------------------------------------------------
 
@@ -327,9 +373,6 @@ WIZZ.owlSlider = function(){
         itemsDesktopSmall : [900,2], // x betweem 900px and 601px
         itemsTablet: [600,1],        // x items between 600 and 0
         itemsMobile : [600,1],       // itemsMobile disabled - inherit from itemsTablet option
-        afterInit: function(elem){
-            WIZZ.sameHeightBlogItems();
-        }
     });
 
     /*
@@ -396,33 +439,37 @@ WIZZ.quotesSlider = function(){
 }
 
 /*
-    YES
+    ## sameHeightBlogItems ##
+
+    Does what it says.
+    Function needs a delay to compensate for some font-loading delay, yeah weird! 
 */
 WIZZ.sameHeightBlogItems = function(){
 
-    if ( $('.news-item').length >= 1 ){
+    setTimeout(function(){
 
-        var highest   = 0,
-            $articles = $('.news-item');
+        if ( $('.news-item').length >= 1 ){
 
-        // Reset height
-        $articles.height('auto');
+            var highest   = 0,
+                $articles = $('.news-item article');
 
-        // Find tallest
-        $.each( $articles, function(){
+            // Reset height
+            $articles.height('auto');
 
-            console.log($(this).height());
+            // Find tallest
+            $.each( $articles, function(){
 
-            if ( $(this).outerHeight() > highest ) {
-                highest = $(this).outerHeight();
-                ;
-            }
-        })
+                if ( $(this).height() > highest ) {
+                    highest = $(this).height();
+                }
+            })
 
-        // Apply height to all articles
-        $articles.height(highest);
+            // Apply height to all articles
+            $articles.height(highest);
 
-    }
+        }
+        
+    },50);
 
 }
 
@@ -444,14 +491,14 @@ $(function() {
     WIZZ.mapInteractions();
     WIZZ.quotesSlider();
     WIZZ.responsiveVideos();
-    // WIZZ.sameHeightBlogItems();
+    WIZZ.sameHeightBlogItems();
 
     // For dev purpose
     // console.log(WIZZ.viewport().width);
     //$('body').obfuscateEmail('obfuscate', 'Website enquiry');
 
     // Use debounce in production as this is way too funky!
-    $(window).resize(function() {
+    $(window).on("debouncedresize", function(){
         WIZZ.deviceNav();
         WIZZ.viewport();
         WIZZ.sameHeightBlogItems();
