@@ -198,7 +198,7 @@ h1 { font-size: 54px; letter-spacing: 0.065em; line-height: 60px; display: inlin
 
 h2 { font-size: 40px; line-height: 40px; margin-bottom: 40px; letter-spacing: 0.015em; }
 
-h3 { font-size: 37px; line-height: 50px; margin-bottom: 25px; letter-spacing: 0.015em; font-weight: 600; }
+h3 { font-size: 37px; line-height: 50px; margin-bottom: 25px; letter-spacing: 0.015em; }
 
 h4 { font-family: 'Roboto', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 12px; line-height: 20px; text-transform: inherit; }
 
@@ -227,8 +227,11 @@ strong { font-weight: 500; }
 
 /* Disable webkit smoothing for readability */
 p,
+nav,
 .intro-wrap h3,
 .form-generic { -webkit-font-smoothing: auto; }
+
+
 
 .holding { background: white; }
 
@@ -423,6 +426,8 @@ section { width: 100%; padding: 0 60px; }
 
 /* Volunteer section */
 .module-quote { overflow: hidden; padding: 80px; }
+
+    .module-quote a { color: white; }
 
 	.module-quote blockquote { display: table-cell; color: black; padding: 60px 40px; font-size: 33px; line-height: 41px; font-weight: 100; float: none; vertical-align: middle; }
 
@@ -812,13 +817,13 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
         .generic-page .g-col-2 { padding: 0px; }
 
     /* Volunteer section */
-    .module-quote  {}
+    .module-quote  { padding: 40px; }
 
         .module-quote  .cta { position: relative; }
 
         .module-quote  .cta-wrap { display: block; }
 
-        .module-quote  blockquote { display: block; font-size: 24px; line-height: 30px; }
+        .module-quote  blockquote { display: block; font-size: 24px; line-height: 30px; padding: 30px; }
 
         .module-quote  .quote-name { font-size: 14px; padding-top: 10px; }
 
@@ -883,6 +888,8 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
     /* When and Where section */
     .map { }
         .map .owl-carousel .owl-wrapper-outer { padding: 0px 10px; }
+
+    .module-quote  { padding: 40px 20px }
 
     .module-sponsors { }
     .module-sponsors h3 { padding-top: 40px; padding-bottom: 40px; }
