@@ -207,7 +207,7 @@ h4.form { font-size: 40px; line-height: 40px; margin-bottom: 35px; letter-spacin
 p,
 em, 
 ul,
-ol { margin-bottom: 1.25em; font-size: 14px; line-height: 1.875em; color: rgb(0,0,0); }
+ol { color: rgb(0, 0, 0); font-size: 0.8125em; line-height: 1.92308em; margin-bottom: 25px; } /* 13/25px */
 
 em { font-style: normal; font-weight: 400; }
 
