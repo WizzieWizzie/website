@@ -131,7 +131,7 @@ function wizzie_navigation(){
     $args = array(
         'container'       => '',
         'menu'            => 'primary',
-        'items_wrap'      => '<ul>%3$s</ul>',
+        'items_wrap'      => '%3$s',
         'walker'          => new MV_Cleaner_Walker_Nav_Menu()
     );
 

@@ -227,7 +227,6 @@ strong { font-weight: 500; }
 
 /* Disable webkit smoothing for readability */
 p,
-nav,
 .intro-wrap h3,
 .form-generic { -webkit-font-smoothing: auto; }
 

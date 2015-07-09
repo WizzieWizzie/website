@@ -40,7 +40,10 @@
             </a>
 
             <nav class="main vcentre cf">
-                <?php wizzie_navigation(); ?>
+                <ul>
+                    <?php wizzie_navigation(); ?>
+                    <li><a href="mailto:contact@wizziewizzie.org">Contact</a></li>
+                </ul>
                 <ul class="social-share">
                     <li class="facebook">
                         <a href="//facebook.com" target="_blank">Facebook</a>
