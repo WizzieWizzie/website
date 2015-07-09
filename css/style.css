@@ -199,7 +199,7 @@ h1 { font-size: 54px; letter-spacing: 0.065em; line-height: 60px; display: inlin
 
 h2 { font-size: 40px; line-height: 40px; margin-bottom: 40px; letter-spacing: 0.015em; }
 
-h3 { font-size: 37px; line-height: 50px; margin-bottom: 25px; letter-spacing: 0.015em; font-weight: 600; }
+h3 { font-size: 37px; line-height: 50px; margin-bottom: 25px; letter-spacing: 0.015em; }
 
 h4 { font-family: 'Roboto', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 12px; line-height: 20px; text-transform: inherit; }
 
@@ -208,7 +208,7 @@ h4.form { font-size: 40px; line-height: 40px; margin-bottom: 35px; letter-spacin
 p,
 em, 
 ul,
-ol { margin-bottom: 1.25em; font-size: 14px; line-height: 1.875em; color: rgb(0,0,0); }
+ol { color: rgb(0, 0, 0); font-size: 0.8125em; line-height: 1.92308em; margin-bottom: 25px; } /* 13/25px */
 
 em { font-style: normal; font-weight: 400; }
 
