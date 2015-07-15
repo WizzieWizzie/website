@@ -526,11 +526,23 @@ WIZZ.responsiveVideos = function(){
     $('main').fitVids();
 }
 
+/* 
+---------------------------------------------------------------------------------------------------- */
+WIZZ.userAgent = function(){
+
+    var iOS = ( navigator.userAgent.match(/iPad|iPhone|iPod/g) ? true : false );
+
+    $("body").toggleClass('iOS', iOS);
+
+}
+
+
 /* Fire this puppy up...
 ---------------------------------------------------------------------------------------------------- */
 $(function() {
 
     WIZZ.deviceNav();
+    WIZZ.userAgent();
     WIZZ.goneMobile();
     WIZZ.bobbleBobs($('.bobble-bob'));
     WIZZ.formUI();
