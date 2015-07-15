@@ -208,9 +208,8 @@ WIZZ.goneMobile = function() {
 
         self.toggleClass('open');
 
-
         // Grab current viewport width and amend the device nav display
-        if(WIZZ.viewport().width <= smlScreen) {
+        if (WIZZ.viewport().width <= smlScreen) {
 
             var navWidth = Math.round(WIZZ.viewport().width - 70);
 
@@ -224,21 +223,26 @@ WIZZ.goneMobile = function() {
 
             //$body.addClass('no-scroll');
 
+            /* LA - toying with an iphone easter egg */
+            $('body').toggleClass('nav-open', true);
+
             $([$header, $viewport]).each(function(){
 
                 $(this).velocity("stop").velocity({
                     right : navWidth
                 }, {
                     duration: 600,
-                    easing: cubic02
+                    easing: cubic02,
+                    complete: function(){
+
+                    }
                 });
 
             });
 
             isNavopen = true;
 
-
-        } else if(isNavopen) {
+        } else if (isNavopen) {
 
             $([$header, $viewport]).each(function(){
 
@@ -246,13 +250,20 @@ WIZZ.goneMobile = function() {
                     right : 0
                 }, {
                     duration: 600,
-                    easing: cubic01
+                    easing: cubic01,
+                    complete: function(){
+                        $('body').toggleClass('nav-open', false);
+                    }
                 });
 
             });
 
             isNavopen = false;
+
         }
+
+        // $('body').toggleClass('nav-open', isNavopen);
+
     });
 };
 
@@ -376,22 +387,18 @@ WIZZ.owlSlider = function(){
     });
 
     /*
-        MAPS LOCATIONS
+        MAPS
     */
 
-    if ($("section.map ul").length) {
-
-        $("section.map ul").owlCarousel({
-            items: 3,
-            navigation: true,
-            pagination: false,
-            itemsDesktop : [1000,3], //5 items between 1000px and 901px
-            itemsDesktopSmall : [900,2], // betweem 900px and 601px
-            itemsTablet: [600,1], //2 items between 600 and 0
-            itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
-        });
-
-    }
+    $("section.map ul").owlCarousel({
+        items: 2,
+        navigation: true,
+        pagination: false,
+        itemsDesktop : [1000,2], //5 items between 1000px and 901px
+        itemsDesktopSmall : [900,2], // betweem 900px and 601px
+        itemsTablet: [600,1], //2 items between 600 and 0
+        itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+    });
 
 }
 
@@ -399,7 +406,7 @@ WIZZ.owlSlider = function(){
 ---------------------------------------------------------------------------------------------------- */
 WIZZ.mapInteractions = function(){
 
-    // Found inside acfmap.js
+    // Found inside map.js
 
 }
 
@@ -414,7 +421,9 @@ WIZZ.quotesSlider = function(){
     var $last;
     var $current = $sponsorsList.find('li:last-of-type');
 
-    $sponsors.on('click', $sponsorsListNext, function() {
+    $sponsorsListNext.on('click', function(e) {
+
+        console.log(e);
 
         $sponsorsList.velocity({
             left: "+=" + $current.outerWidth(),
@@ -450,6 +459,7 @@ WIZZ.quotesSlider = function(){
        Determine if the width of all logos fits on the current screen
        Enable the 'next' button if they don't fit
     */
+
     function showHideButton(){
 
         if ( ($sponsors.width() - $('.module-sponsors h3').width()) < $sponsorsList.width()) {
@@ -463,37 +473,50 @@ WIZZ.quotesSlider = function(){
 }
 
 /*
-    ## sameHeightBlogItems ##
+    sameHeightItems
+    ===============
 
     Does what it says.
-    Function needs a delay to compensate for some font-loading delay, yeah weird! 
+
+    For best results use before midnight only! And if you can, a
+    child container cause we're using your children();
+
+    Function triggers off a delay to compensate
+    for some initial font-loading.
+
+    Instructions:
+      - BE CAUTIOS THE SetTimeout IS ABOUT TO BLOW
+      - ITEMS OK FOR CONSUMTION
+      - DO NOT TOUCH THE CLASSNAME!
+      - SAMEHEIGHTITEMS ARE DELICOUS
+      - FKn USE IT
+
+    Yours,
+    The honerable authority.
+
 */
-WIZZ.sameHeightBlogItems = function(){
+
+WIZZ.sameHeightItems = function(){
 
     setTimeout(function(){
 
-        if ( $('.news-item').length >= 1 ){
+        var highest   = 0,
+            $articles = $('.js-same-height-me-and-my-friends-please').children();
 
-            var highest   = 0,
-                $articles = $('.news-item article');
+        // Reset height
+        $articles.height('auto');
 
-            // Reset height
-            $articles.height('auto');
+        // Find tallest
+        $.each( $articles, function(){
+            if ( $(this).height() > highest ) {
+                highest = $(this).height();
+            }
+        })
 
-            // Find tallest
-            $.each( $articles, function(){
+        // Apply height to all articles
+        $articles.height(highest);
 
-                if ( $(this).height() > highest ) {
-                    highest = $(this).height();
-                }
-            })
-
-            // Apply height to all articles
-            $articles.height(highest);
-
-        }
-        
-    },50);
+    }, 50);
 
 }
 
@@ -515,7 +538,7 @@ $(function() {
     WIZZ.mapInteractions();
     WIZZ.quotesSlider();
     WIZZ.responsiveVideos();
-    WIZZ.sameHeightBlogItems();
+    WIZZ.sameHeightItems();
 
     // For dev purpose
     // console.log(WIZZ.viewport().width);
@@ -525,7 +548,7 @@ $(function() {
     $(window).on("debouncedresize", function(){
         WIZZ.deviceNav();
         WIZZ.viewport();
-        WIZZ.sameHeightBlogItems();
+        WIZZ.sameHeightItems();
     });
 });
 

@@ -2,9 +2,10 @@
 /* ------------------------------------------------------------------------------------------------------------------------
 FILE_ Global Styles + Mediaqueries v.1.0
 ---
-PROJ_ Suzy Dallas Interiors
+PROJ_ Wizzie Wizzie
 AUTH_ Danny Brooks / @PhageDesign / phagedesign.co.uk
-MADE_ 12.05.15
+      Lars Bortfeldt / larsAttacks.co.uk
+MADE_ 15.07.15
 MODI_ 00.00.00
 ------------------------------------------------------------------------------------------------------------------------ */
 
@@ -277,7 +278,7 @@ header { position: fixed; top: 0; right: 0; width: 100%; padding: 0 60px; backgr
 
 		nav ul { padding: 0; margin: 0; list-style-type: none; float: left; }
 
-		nav ul li { display: inline; margin-left: 40px; padding: 0;  }
+		nav ul li { display: inline; margin-left: 30px; padding: 0;  }
 
 		nav ul li:first-child { margin-left: 0; }
 
@@ -295,7 +296,9 @@ header { position: fixed; top: 0; right: 0; width: 100%; padding: 0 60px; backgr
 
         nav ul.social-share li.facebook a { background-position: 0px -53px; }
 
-        nav ul.social-share li.twitter a { background-position: -6px -10px; }
+        nav ul.social-share li.twitter { padding: 0px; margin: 0px; }
+
+        nav ul.social-share li.twitter a { background-position: -6px -9px; }
 
 
 article header  { position: relative; }
@@ -318,7 +321,7 @@ article header  { position: relative; }
 	right: 0;
 	}
 
-.nav-device ul { margin-left: 50%; width: 50%; padding-top: 70px; list-style-type: none; float: none;  text-align: center; }
+.nav-device ul { margin-left: 51%; width: 50%; padding-top: 70px; list-style-type: none; float: none;  text-align: center; }
 
 .nav-device ul li { display: block; margin-left: 0; padding: 0; height: 70px;  }
 
@@ -326,7 +329,7 @@ article header  { position: relative; }
 
 .nav-device ul li a { line-height: 70px; }
 
-.nav-device ul.social-share { margin-left: 50%; padding: 0; border-left: none; padding-top: 20px; }
+.nav-device ul.social-share { padding: 0; border-left: none; padding-top: 20px; }
 
 .nav-device ul.social-share li { margin: 0 auto; display: inline-block;  }
 
@@ -411,7 +414,7 @@ section { width: 100%; padding: 0 60px; }
 
 	.news-item article { position: relative; overflow: hidden; background: rgb(255,255,255); padding: 60px 40px; box-shadow: -5px 5px 0px 0px rgba(0,0,0,0.05); }
 
-	.news-item:first-of-type article:before { content: "NEW"; line-height: 80px; text-align: center; color: #FFF; position: absolute; top: 10px; right: 10px; width: 80px; height: 80px; border-radius: 40px; background: #FFCC00; }
+	.owl-item:first-of-type .news-item article:before { content: "NEW"; line-height: 80px; text-align: center; color: #FFF; position: absolute; top: 10px; right: 10px; width: 80px; height: 80px; border-radius: 40px; background: #FFCC00; }
 
 	.news-item time { font-size: 40px; line-height: 40px; color: #30b7ef; margin-bottom: 5px; display: block; }
 
@@ -624,11 +627,12 @@ section { width: 100%; padding: 0 60px; }
 /* When and Where section */
 .map { background: white; padding: 0px; }
 
-    .map ul { padding: 60px 20px; }
+    .map ul { padding: 30px 60px; }
 
-    .map ul li { cursor: pointer; padding-left: 60px; border-right: 1px solid #e5e5e5; height: 210px; list-style: none; }
+    .map ul li { cursor: pointer; border-right: 1px solid #e5e5e5; list-style: none; margin-left: 0px; text-align: center; }
+    .map .owl-item:last-of-type li { border: none; }
 
-    .map ul li h3 { color: #00d668; font-weight: 600; }
+    .map ul li h3 { color: #00d668; font-weight: 600; padding-top: 20px; }
 
     .map ul li p { font-size: 13px; line-height: 1.575em; letter-spacing: 0.05em; }
 
@@ -638,7 +642,13 @@ section { width: 100%; padding: 0 60px; }
 
     .map .google-acfmap p { line-height: 1.275em; color: rgb(0,0,0); text-align: center; }
 
-    .map img[src*="gstatic.com/"], img[src*="googleapis.com/"] { max-width: none; }
+    .map img[src*="gstatic.com/"],
+    .map img[src*="googleapis.com/"] { max-width: none; }
+
+.map .owl-controls { position: absolute; top: 40%; width: 100%; left: 0; }
+.map .owl-carousel.owl-theme .owl-controls .owl-buttons div { padding: 20px; background: white; opacity: 1; }
+.map .owl-carousel.owl-theme .owl-controls .owl-buttons div:hover { background: #f3f3f3; }
+.map .owl-carousel.owl-theme .owl-controls .owl-buttons .owl-next { right: 0px; }
 
 /* Grid Structure */
 .g-row { width: 100%; max-width: 1400px; margin: 0 auto; }
@@ -687,7 +697,6 @@ footer h4 { font-weight: 500; font-size: 14px; line-height: 21px; letter-spacing
 footer p { font-size: 13px; line-height: 20px; letter-spacing: 0.025em; opacity: .5; }
 
 footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em; float: right; text-align: right; opacity: .5; }
-
 
 
 
@@ -857,21 +866,17 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
 	/* Typography */
 	h3 {font-size: 30px; line-height: 30px; margin-bottom: 20px; letter-spacing: 0.015em; }
 
-
 	/* Header */
 	header { padding: 0 0 0 20px; }
     footer { padding: 20px 0px; }
 
 	.nav-device ul { margin-left: 0; padding: 70px 0 0 70px; width: 100%; }
-
+    .nav-device ul.social-share li.facebook { margin-left: -31px; }
 	/* .nav-device ul li { margin-left: -70px; } */
 
-	.nav-device ul.social-share { margin-left: 70px; padding: 0; border-left: none; }
-
 	section { padding: 0 20px; }
-    section .post-text { padding: 20px; } 
-    
-    
+    section .post-text { padding: 20px; }
+
 	/* Intro */
 	.intro-wrap { background: rgb(255,255,255); margin: 0 -20px; padding: 40px 20px;  }
 	.intro-wrap .text { padding: 0 0 20px 0; }
@@ -889,10 +894,28 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
     /* When and Where section */
     .map { }
         .map .owl-carousel .owl-wrapper-outer { padding: 0px 10px; }
+        .map ul { padding: 40px 20px; }
+        .map ul li { border: 0px; }
 
     .module-quote  { padding: 40px 20px }
 
     .module-sponsors { }
     .module-sponsors h3 { padding-top: 40px; padding-bottom: 40px; }
+
+    footer .copyright { float: left; padding-left: 20px; }
+
+}
+
+body:not(.nav-open):before {
+    content: "";
+    width: 100%;
+    height: 400px;
+    background-color: #ddd;
+    z-index: 1;
+    display: block;
+    position: fixed	;
+    left: 0px;
+    top: 0px;
+    background: url('../images/temp/gears.png');
 
 }

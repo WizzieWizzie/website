@@ -1,4 +1,4 @@
-<div class="news-item">
+<div class="news-item js-same-height-me-and-my-friends-please">
     <article>
         <time datetime="<?php echo get_the_date('Y-m-d'); ?>">
             <?php echo get_the_date('d F Y'); ?>

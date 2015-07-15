@@ -127,7 +127,7 @@
         });
 
         // add to array
-        map.markers.push( marker );
+        map.markers.push(marker);
 
         // if marker contains HTML, add it to an infoWindow
         if ($marker.html()) {
@@ -145,13 +145,14 @@
             // SOOOO MUCH YELLOW xxLA
             $(document).on("click", "." + triggerClass, function(){
                 infowindow.setContent($marker.html());
-                infowindow.open(map, marker);
+                // infowindow.open(map, marker);
             })
 
             // close info window when map is clicked
             google.maps.event.addListener(map, 'click', function(event) {
                 if (infowindow) {
-                    infowindow.close(); }
+                    infowindow.close(); 
+                }
             });
 
 
@@ -178,25 +179,27 @@
         var bounds = new google.maps.LatLngBounds();
 
         // loop through all markers and create bounds
-        $.each( map.markers, function( i, marker ){
+        $.each (map.markers, function(i, marker){
 
-            var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() );
+            var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() ) ;
 
-            bounds.extend( latlng );
+            bounds.extend(latlng);
 
         });
 
         // only 1 marker?
-        if( map.markers.length == 1 )
-        {
+
+        if (map.markers.length == 1) {
+
             // set center of map
-            map.setCenter( bounds.getCenter() );
-            map.setZoom( 16 );
-        }
-        else
-        {
+            map.setCenter(bounds.getCenter());
+            map.setZoom(16);
+
+        } else {
+
             // fit to bounds
-            map.fitBounds( bounds );
+            map.fitBounds(bounds);
+
         }
 
     }
@@ -207,10 +210,12 @@
         map.panTo(center);
     }
 
+    // Wizzie intergration
     $(document).on('click', "section.map ul li", function(){
         moveToLocation( $(this).data('lat'), $(this).data('lng') );
     })
-    
+
+    // Re-whattt?
     $(window).on('resize', function(){
         center_map( map );
     })
@@ -231,9 +236,7 @@
     $(document).ready(function(){
 
         $('.google-acfmap').each(function(){
-
-            render_map( $(this) );
-
+            render_map($(this));
         });
 
     });
