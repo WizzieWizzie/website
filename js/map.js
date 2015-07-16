@@ -64,9 +64,11 @@
             overviewMapControl:false,
             zoomControlOptions: {
                 style:google.maps.ZoomControlStyle.SMALL
-            }
+            },
+            draggable: !$('html').hasClass('touch')
 
         };
+
 
         // create map
         map = new google.maps.Map( $el[0], args);
