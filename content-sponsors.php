@@ -8,24 +8,24 @@
 
         <div class="wrap">
             <ul>
-                <li>
+                <li class="li-sponsor-intel">
                     <a href="http://www.intel.co.uk/" target="_blank">
-                        <img src="<?php echo get_template_directory_uri() ?>/images/sponsors/intel.png" alt="Intel" />
+                        <img src="<?php echo get_template_directory_uri() ?>/images/sponsors/intel@2x.png" alt="Intel" />
                     </a>
                 </li>
-                <li>
+                <li class="li-sponsor-lenovo">
                     <a href="www.lenovo.com/" target="_blank">
-                        <img src="<?php echo get_template_directory_uri() ?>/images/sponsors/lenovo.png" alt="Lenovo" />
+                        <img src="<?php echo get_template_directory_uri() ?>/images/sponsors/lenovo@2x.png" alt="Lenovo" />
                     </a>
                 </li>
-                <li>
+                <li class="li-sponsor-ee">
                     <a href="http://ee.co.uk/" target="_blank">
-                        <img src="<?php echo get_template_directory_uri() ?>/images/sponsors/ee.png" alt="ee" />
+                        <img src="<?php echo get_template_directory_uri() ?>/images/sponsors/ee@2x.png" alt="ee" />
                     </a>
                 </li>
-                <li>
+                <li class="li-sponsor-islington">
                     <a href="http://www.islington.gov.uk" target="_blank">
-                        <img src="<?php echo get_template_directory_uri() ?>/images/sponsors/islington.png" alt="Islington Councik" />
+                        <img src="<?php echo get_template_directory_uri() ?>/images/sponsors/islington@2x.png" alt="Islington Council" />
                     </a>
                 </li>
             </ul>
