@@ -48,25 +48,24 @@
                     <li>Training other volunteers on different learning tools and programming languages</li>
                     <li>Networking with volunteers from a range of technical backgrounds</li>
                 </ul>
-          
 
+            <em>When required:</em>
             <p>
-                <em>When required:</em>
                 Saturday mornings – 11.00 to 13:15 (the club runs between 11:30 and 13:00).
             </p>
 
+            <em>Skills and Qualifications:</em>
             <p>
-                <em>Skills and Qualifications:</em>
                 You should be confident with one or more of these coding languages/tools: HTML; Scratch; Ruby.
             </p>
 
+            <em>Expenses:</em>
             <p>
-                <em>Expenses:</em>
                 This is a volunteer project; refreshments provided.
             </p>
 
+            <em>Training:</em>
             <p>
-                <em>Training:</em>
                 We provide core training on the different tools used.
             </p>
 
