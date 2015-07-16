@@ -36,7 +36,7 @@
         <div class="head-inner">
 
             <a href="<?php echo bloginfo('home'); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/wizzie-logo-small.png" class="type-marque vcentre" alt="Logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/wizzie-logo@2x.png" class="type-marque vcentre" alt="Logo">
             </a>
 
             <nav class="main vcentre cf">
