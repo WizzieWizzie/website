@@ -20,55 +20,11 @@
     <div class="g-row">
 
         <div class="g-col-3">
-            <h3>Information for volunteers</h3>
-            <p>
-                If you’re a coder and want to share your knowledge with the young developers of the future, get involved, and join us at the Wizzie Wizzie Computer Coding Club – our weekly club for young people.
-            </p>
-
-            <p>
-                We’re looking for enthusiastic individuals who are confident coders to share their skills and learning with young people. We currently teach HTML, Scratch and Ruby.
-            </p>
-
-            <p>
-                You’ll get the opportunity to help young people develop their skills but will also be able to network with like-minded volunteers and potentially develop skills in new areas yourself which could help with your career, too!
-            </p>
-
+            <?php the_field('column_1'); ?>
         </div>
 
         <div class="g-col-3">
-
-            <h4 class="form">Additional Information</h4>
-
-                <em>Types of activity:</em>
-                <ul>
-                    <li>Teaching young people different types of computer languages</li>
-                    <li>Teaching problem solving skills</li>
-                    <li>Supporting young people with developing their ideas</li>
-                    <li>Contributing to planning of coding sessions</li>
-                    <li>Training other volunteers on different learning tools and programming languages</li>
-                    <li>Networking with volunteers from a range of technical backgrounds</li>
-                </ul>
-
-            <em>When required:</em>
-            <p>
-                Saturday mornings – 11.00 to 13:15 (the club runs between 11:30 and 13:00).
-            </p>
-
-            <em>Skills and Qualifications:</em>
-            <p>
-                You should be confident with one or more of these coding languages/tools: HTML; Scratch; Ruby.
-            </p>
-
-            <em>Expenses:</em>
-            <p>
-                This is a volunteer project; refreshments provided.
-            </p>
-
-            <em>Training:</em>
-            <p>
-                We provide core training on the different tools used.
-            </p>
-
+            <?php the_field('column_2'); ?>
         </div>
 
         <div class="g-col-3">

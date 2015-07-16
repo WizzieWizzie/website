@@ -515,7 +515,7 @@ section { width: 100%; padding: 0 60px; }
 
     .form-generic p { position: relative; }
 
-    .form-generic em { margin-bottom: 16px; }
+    .form-generic em { font-size: 13px; }
 
     .form-generic label { font-weight: 500; }
 
