@@ -199,7 +199,7 @@ h1 { font-size: 54px; letter-spacing: 0.065em; line-height: 60px; display: inlin
 
 h2 { font-size: 40px; line-height: 40px; margin-bottom: 40px; letter-spacing: 0.015em; }
 
-h3 { font-size: 37px; line-height: 50px; margin-bottom: 25px; letter-spacing: 0.015em; }
+h3 { font-size: 34px; line-height: 50px; margin-bottom: 25px; letter-spacing: 0.015em; }
 
 h4 { font-family: 'Roboto', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 12px; line-height: 20px; text-transform: inherit; }
 
@@ -458,9 +458,9 @@ section { width: 100%; padding: 0 60px; }
 
     .li-sponsor-intel { width: 145px; }
     .li-sponsor-lenovo { width: 245px; }
-    .li-sponsor-ee { width: 109px; }
+    .li-sponsor-ee { width: 94px; }
     .li-sponsor-islington { width: 255px; }
-
+    .li-sponsor-krome { width: 190px; position: relative; top: 5px; }
 /*
     ``````````````````````````````````````````````````````````````````````````````
 */
@@ -564,7 +564,7 @@ section { width: 100%; padding: 0 60px; }
 
     textarea {
         overflow: auto;
-        height: 227px;
+        height: 241px;
         background: #fdfdfd;
         border: 1px solid #c2c2c2;
         border-radius: 2px;
@@ -624,7 +624,7 @@ section { width: 100%; padding: 0 60px; }
 /* Form specific */
 .form-generic.signUpForm { }
 .form-generic.signUpForm div h4:nth-of-type(2) { margin-top: 90px; }
-.form-generic.signUpForm div input[type='submit'] { margin-top: 32px; }
+.form-generic.signUpForm div input[type='submit'] { margin-top: 30px; }
 
 .form-generic.volunteerForm { }
 .form-generic.volunteerForm em { display: block; }
@@ -874,6 +874,9 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
             overflow: hidden;
             margin-bottom: -60px;
         }
+        
+        
+    .li-sponsor-krome { width: 190px; position: relative; top: 0px; }
 }
 
 /* 500 BREAKPOINT

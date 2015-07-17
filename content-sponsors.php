@@ -8,6 +8,12 @@
 
         <div class="wrap">
             <ul>
+            
+                <li class="li-sponsor-krome">
+                    <a href="http://www.krome.co.uk/" target="_blank">
+                        <img src="<?php echo get_template_directory_uri() ?>/images/sponsors/krome@2x.png" alt="Krome" />
+                    </a>
+                </li>
                 <li class="li-sponsor-intel">
                     <a href="http://www.intel.co.uk/" target="_blank">
                         <img src="<?php echo get_template_directory_uri() ?>/images/sponsors/intel@2x.png" alt="Intel" />
