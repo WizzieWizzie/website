@@ -456,6 +456,10 @@ section { width: 100%; padding: 0 60px; }
 
     .module-sponsors ul li a {  overflow: hidden; display: block;  }
 
+	@-moz-document url-prefix() {
+    	.module-sponsors ul li a img { height: 50px; }
+    }
+    
     .li-sponsor-intel { width: 145px; }
     .li-sponsor-lenovo { width: 245px; }
     .li-sponsor-ee { width: 94px; }
