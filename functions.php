@@ -34,7 +34,8 @@ function wizzie_setup(){
         'primary' => 'Primary Navigation'
     ));
 
-    add_theme_support('title-tag');
+    //add_theme_support('title-tag');
+    wizzie_wp_title();
 
     // add_theme_support( 'post-thumbnails', array( /*'post',*/ 'gallery' ) );
     // add_image_size( 'mm-medium', 772, 482, array('center', 'center') );

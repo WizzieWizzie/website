@@ -13,29 +13,30 @@
 function fix_wp_title($title_parts){
 
 
-    var_dump($title_parts);
+    global $wp_query;
+    
+    $page_nr = get_query_var('paged');
+    
+    if ($page_nr) {
+    
+        if (get_query_var('category_name')) {
+            $newTitle = ucfirst(get_query_var('category_name'))." / " . $page_nr;
+        } else {
+            $newTitle = "News / " . $page_nr;
+        }
+    
+        $title[0] = $newTitle;
+    
+    } else if (is_front_page()){
+    
+        $title[0] = 'Wizzie Wizzie | London Computer Coding Club';
 
-    // global $wp_query;
-    //
-    // $page_nr = get_query_var('paged');
-    //
-    // if ($page_nr) {
-    //
-    //     if (get_query_var('category_name')) {
-    //         $newTitle = ucfirst(get_query_var('category_name'))." / " . $page_nr;
-    //     } else {
-    //         $newTitle = "News / " . $page_nr;
-    //     }
-    //
-    //     $title[0] = $newTitle;
-    //
-    // } else if (is_front_page()){
-    //
-    //     $title[0] = 'Wizzie Wizzie | London Computer Coding Club';
-    //
-    // }
+    } else {
+        $title = $title_parts;
+    }
 
-    return false;
+    return $title;
+    
 }
 
 function wizzie_wp_title(){
