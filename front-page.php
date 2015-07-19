@@ -15,6 +15,14 @@
 
 </section>
 
+<section class="intro gradient" data-pattern="slash">
+
+    <div class="g-row">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OjJ4JoIOUhg" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+</section>
+
 <?php get_template_part('content-news', 'frontpage'); ?>
 <?php get_template_part('content-quote'); ?>
 <?php get_template_part('content-sponsors'); ?>
