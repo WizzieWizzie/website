@@ -521,6 +521,29 @@ WIZZ.sameHeightItems = function(){
 
 }
 
+/*
+---------------------------------------------------------------------------------------------------- */
+WIZZ.fontAdjust = function(){
+
+    var chars;
+    var fontSizingClass = ".font-auto-adjust--normal";
+    var parentClassName = ".font-auto-adjust";
+
+    $.each($('*[data-characters]'), function(){
+
+        chars = $(this).data('characters');
+
+        console.log(chars);
+
+        if (chars > 200) { fontSizingClass = "font-auto-adjust--smaller"; }
+        if (chars > 300) { fontSizingClass = "font-auto-adjust--tiny"; }
+
+        $(this).parents(parentClassName).addClass(fontSizingClass)
+
+    })
+}
+
+
 /* Responsive Video
 ---------------------------------------------------------------------------------------------------- */
 WIZZ.responsiveVideos = function(){
@@ -552,6 +575,7 @@ $(function() {
     WIZZ.quotesSlider();
     WIZZ.responsiveVideos();
     WIZZ.sameHeightItems();
+    WIZZ.fontAdjust();
 
     // For dev purpose
     // console.log(WIZZ.viewport().width);

@@ -235,6 +235,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
  * Readmore
 */
 function custom_excerpt_more($more) {
+    return "...";
     return ""; # '<a href="'.get_the_permalink().'" class="more">Read more...</a>';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
