@@ -40,7 +40,6 @@
         "wp-cli/wp-cli": "*",
 
         "wpackagist-plugin/wordpress-importer": "0.6",
-        "wpackagist-plugin/wordpress-seo": "*",
         "wpackagist-plugin/disable-comments": "*",
         "wpackagist-plugin/wp-mail-smtp": "*",
         "wpackagist-plugin/advanced-custom-fields": "*",
