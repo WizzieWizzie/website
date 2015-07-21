@@ -662,6 +662,8 @@ section { width: 100%; padding: 0 60px; }
 
 	.g-col-2 { width: 66.666%; }
 
+    .g-col-half { width: 50%; }
+
 	.g-col-3 { width: 33.333%; }
 
 	.g-col-4 { width: 25%; }
@@ -903,9 +905,8 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
 
 }
 
-/*
-    IOS 
-*/
+/* IOS 
+----------------------------------------------------------------------------------------------- */
 body.iOS:not(.nav-open):before {
     content: "";
     width: 100%;
@@ -921,12 +922,15 @@ body.iOS:not(.nav-open):before {
 
 }
 
-
 /*
-
-  Generals
-  ------------------------------------------------ 
+    LA UPDATE
+    -----------------------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------------
 */
+
+/* Generals
+----------------------------------------------------------------------------------------------- */
 
 .v-center { display: table; }
 .v-centre-inner { display: table-cell; vertical-align: middle; float: none; }
@@ -940,19 +944,27 @@ body.iOS:not(.nav-open):before {
 
 .font-normal { font-weight: normal; }
 .font-bold   { font-weight: 600; }
+.font-smoothe { -webkit-font-smoothing: auto; }
 
 .para-center { text-align: center; }
 .para-left   { text-align: left; }
 .para-right  { text-align: right; }
 
+/* Trying to normalize and create a basic padding pattern */
+
+/* default */                               .padding-basic-box { padding: 0px 0px; }
+@media only screen and (max-width: 800px) { .padding-basic-box { padding: 0px;      } }
+@media only screen and (max-width: 500px) { .padding-basic-box { padding: 0px 0px; } }
+
+/* default */                               .padding-alt-box { padding: 80px; }
+@media only screen and (max-width: 800px) { .padding-alt-box { padding: 40px;      } }
+@media only screen and (max-width: 500px) { .padding-alt-box { padding: 40px 20px; } }
 
 
-/*
-
-  Module Wizzie Quotes
-  ------------------------------------------------ 
-  all size adjusting font adjustments need to be in em
-  so, the font-adjusting class can resize things based on the quotes length
+/* Module Wizzie Quotes
+------------------------------------------------------------------------------------------------
+all size adjusting font adjustments need to be in em
+so, the font-adjusting class can resize things based on the quotes length 
 
 */
 
@@ -973,16 +985,25 @@ body.iOS:not(.nav-open):before {
 }
 
 @media only screen and (max-width: 500px) {
-    .module-quote  { padding: 40px 20px }
+    .module-quote  { padding: 40px 20px; }
 }
 
-/*
-
-  Module Auto Font-Adjusting
-  -----------------------------------------------
-*/
+/* Module Auto Font-Adjusting
+--------------------------------------------------------------------------------------------- */
 
 .font-auto-adjust { font-size: 1rem; }
 .font-auto-adjust--normal    { font-size: 1em; }
 .font-auto-adjust--smaller   { font-size: 0.85em; }
 .font-auto-adjust--tiny      { font-size: 0.7em; letter-spacing: 0.025em; }
+
+
+
+/*
+
+Two-Col-Feature
+------------------------------------------------------------------------------------------------ */
+.two-col-feature { overflow: hidden; }
+.two-col-feature-col1 { padding-left: 40px; padding-right: 40px; }
+.two-col-feature-col2 { }
+
+
