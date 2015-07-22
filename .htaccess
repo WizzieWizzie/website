@@ -23,3 +23,7 @@ SetEnvIfNoCase User-Agent "Googlebot" google_bot
 <Files README.md>
     Deny from all
 </Files>
+
+<Files local-setup.sh>
+    Deny from all
+</Files>
