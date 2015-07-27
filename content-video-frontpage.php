@@ -2,13 +2,16 @@
 
     <div class="g-row">
 
-        <div class="two-col-feature-wrap cf v-center bg-white">
+        <div class="two-col-feature-wrap cf v-center-desktop-only bg-white">
 
-            <div class="two-col-feature-col1 g-col-half bg-white v-centre-inner two-col-feature-arrow">
+            <div class="two-col-feature-col1 g-col-half bg-white v-centre-desktop-only-inner two-col-feature-arrow">
+
                 <h3><?php the_field('headline'); ?></h3>
+
                 <p class="marginless">
                     <?php the_field('copy'); ?>
                 </p>
+
             </div>
 
             <div class="two-col-feature-col2 g-col-half v-centre-inner">

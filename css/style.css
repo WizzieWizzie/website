@@ -206,7 +206,7 @@ h4 { font-family: 'Roboto', Helvetica, Arial, sans-serif; font-weight: 400; font
 h4.form { font-size: 40px; line-height: 40px; margin-bottom: 35px; letter-spacing: 0.015em; font-family: 'Amatic SC', Helvetica, Arial, sans-serif; }
 
 p,
-em, 
+em,
 ul,
 ol { color: rgb(0, 0, 0); font-size: 0.8125em; line-height: 1.92308em; margin-bottom: 25px; } /* 13/25px */
 
@@ -370,6 +370,7 @@ section { width: 100%; padding: 0 60px; }
 	.gradient {
         background: -webkit-linear-gradient(left,      rgb(115, 14, 130) 0%, rgb(255, 28, 132) 100%);
         background:         linear-gradient(to right,  rgb(115, 14, 130) 0%, rgb(255, 28, 132) 100%);
+        filter:             absoluteprogid:DXImageTransform.Microsoft.gradient(startColorstr='#730E82', endColorstr='#FF1C84');
     }
 
     .gradient.breakup { padding: 40px; clear: both; }
@@ -377,6 +378,7 @@ section { width: 100%; padding: 0 60px; }
 	.color-scheme-green .gradient {
         background: -webkit-linear-gradient(left,      rgb(97, 214, 240) 0%, rgb(43, 221, 110) 100%);
         background:         linear-gradient(to right,  rgb(97, 214, 240) 0%, rgb(43, 221, 110) 100%);
+        filter:             absoluteprogid:DXImageTransform.Microsoft.gradient(startColorstr='#61D6F0', endColorstr='#2BDD6E');
     }
 
 	/* Section pattern overlays - Control using the data-pattern attr */
@@ -444,7 +446,7 @@ section { width: 100%; padding: 0 60px; }
 	@-moz-document url-prefix() {
     	.module-sponsors ul li a img { height: 50px; }
     }
-    
+
     .li-sponsor-intel { width: 145px; }
     .li-sponsor-lenovo { width: 245px; }
     .li-sponsor-ee { width: 94px; }
@@ -481,8 +483,8 @@ section { width: 100%; padding: 0 60px; }
         z-index: 100;
         transform: translateX(-16px);
     }
-    
-    .module-sponsors a[data-next]:after{ 
+
+    .module-sponsors a[data-next]:after{
         content: "";
         background: transparent url('../images/svg/ui.svg') no-repeat scroll 0 0;
         width: 20px;
@@ -617,7 +619,7 @@ section { width: 100%; padding: 0 60px; }
 
 .form-generic.volunteerForm { }
 .form-generic.volunteerForm em { display: block; }
-    
+
 /* When and Where section */
 .map { background: white; padding: 0px; overflow: hidden; }
 
@@ -640,7 +642,7 @@ section { width: 100%; padding: 0 60px; }
     .map img[src*="googleapis.com/"] { max-width: none; }
 
     .map .owl-controls { z-index: 50000; position: relative; top: -180px; }
-    .map .owl-carousel.owl-theme .owl-controls .owl-buttons div { padding: 20px; background: white; opacity: 1; 
+    .map .owl-carousel.owl-theme .owl-controls .owl-buttons div { padding: 20px; background: white; opacity: 1;
         border: 3px solid #ECECEC;
           -webkit-transition: all .2s ease-in-out;
              -moz-transition: all .2s ease-in-out;
@@ -786,7 +788,7 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
     .news-item { width: 50%; }
     .news-item:nth-of-type(3) ~ .news-item { display: block; }
 
-  
+
 }
 
 
@@ -854,8 +856,8 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
             overflow: hidden;
             margin-bottom: -60px;
         }
-        
-        
+
+
     .li-sponsor-krome { width: 190px; position: relative; top: 0px; }
 }
 
@@ -905,7 +907,7 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
 
 }
 
-/* IOS 
+/* IOS
 ----------------------------------------------------------------------------------------------- */
 body.iOS:not(.nav-open):before {
     content: "";
@@ -932,8 +934,21 @@ body.iOS:not(.nav-open):before {
 /* Generals
 ----------------------------------------------------------------------------------------------- */
 
+/* Verical Center Helper */
+
 .v-center { display: table; }
 .v-centre-inner { display: table-cell; vertical-align: middle; float: none; }
+
+@media only screen and (max-width: 800px) {
+    .v-center-mobile-only { display: table; }
+    .v-centre-mobile-only-inner { display: table-cell; vertical-align: middle; float: none; }
+}
+
+@media only screen and (min-width: 800px) {
+    .v-center-desktop-only { display: table; }
+    .v-centre-desktop-only-inner { display: table-cell; vertical-align: middle; float: none; }
+}
+
 
 .black { color: black; }
 .white { color: white; }
@@ -954,9 +969,9 @@ body.iOS:not(.nav-open):before {
 .para-right  { text-align: right; }
 
 .rotate-45deg {
-  -webkit-transform: rotate(45deg);  
-      -ms-transform: rotate(45deg);  
-          transform: rotate(45deg); 
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 /* Trying to normalize and create a basic padding pattern */
@@ -973,7 +988,7 @@ body.iOS:not(.nav-open):before {
 /* Module Wizzie Quotes
 ------------------------------------------------------------------------------------------------
 all size adjusting font adjustments need to be in em
-so, the font-adjusting class can resize things based on the quotes length 
+so, the font-adjusting class can resize things based on the quotes length
 
 */
 
@@ -988,7 +1003,7 @@ so, the font-adjusting class can resize things based on the quotes length
 @media only screen and (max-width: 800px) {
     .module-quote { padding: 40px; }
     .module-quote_cta { position: relative; }
-    .module-quote-wrap { display: block; } 
+    .module-quote-wrap { display: block; }
     .module-quote_blockquote { display: block; padding: 30px; font-size: 1.5em; line-height: 1.25em; }       /* adjust-size */
     .module-quote_blockquoteauthor { padding-top: 10px;  font-size: : 14px; }                                /* font: fixed-size */
 }
@@ -1020,7 +1035,7 @@ Two-Col-Feature
 @media only screen and (max-width: 800px) {
     .two-col-feature-wrap { background: transparent; }
     .two-col-feature-col1 { display: block; width: 100%; padding: 40px; }
-    .two-col-feature-col2 { width: 100%; display: block; background-color: transparent; margin-top: 40px; }
+    .two-col-feature-col2 { width: 100%; display: inline-block; background-color: transparent; margin-top: 40px; }
     .two-col-feature-arrow:after { left: 27px; bottom: -8px; top: initial; z-index: 0; }
 }
 
