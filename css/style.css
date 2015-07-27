@@ -198,12 +198,12 @@ h1 { font-size: 54px; letter-spacing: 0.065em; line-height: 60px; display: inlin
 
 
 h2 { font-size: 40px; line-height: 40px; margin-bottom: 40px; letter-spacing: 0.015em; }
-
 h3 { font-size: 34px; line-height: 50px; margin-bottom: 25px; letter-spacing: 0.015em; }
-
 h4 { font-family: 'Roboto', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 12px; line-height: 20px; text-transform: inherit; }
 
-h4.form { font-size: 40px; line-height: 40px; margin-bottom: 35px; letter-spacing: 0.015em; font-family: 'Amatic SC', Helvetica, Arial, sans-serif; }
+.form-generic h3,
+.form-generic h4 { font-size: 40px; line-height: 40px; margin-bottom: 35px; letter-spacing: 0.015em; font-family: 'Amatic SC', Helvetica, Arial, sans-serif; }
+
 
 p,
 em,

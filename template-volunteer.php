@@ -29,7 +29,7 @@
 
         <div class="g-col-3">
 
-            <h3>Sign Up</h3>
+            <h3 class="form">Sign Up</h3>
 
             <!-- <p>
                 The best place to get in touch with us is by using this form:
@@ -40,14 +40,14 @@
                 <p class="row">
                     <label for="volunteer_name">
                         <span class="required">Name: </span>
-                        <input type="text" id="volunteer_name" name="volunteer_name" placeholder="Simon Garfunkel" required />
+                        <input type="text" id="volunteer_name" name="volunteer_name" placeholder="Waldo" required />
                     </label>
                 </p>
 
                 <p class="row">
                     <label for="volunteer_email">
                         <span class="required">Email: </span>
-                        <input type="email" id="volunteer_email" name="volunteer_email" placeholder="dannysmum@phagedesign.co.uk" required />
+                        <input type="email" id="volunteer_email" name="volunteer_email" placeholder="waldo@waldo.net" required />
                     </label>
                 </p>
 

@@ -62,14 +62,14 @@
                 <p class="row">
                     <label for="parents_name">
                         <span class="required">Parent's Name: </span>
-                        <input type="text" id="parents_name" name="parents_name" placeholder="Betty" required />
+                        <input type="text" id="parents_name" name="parents_name" placeholder="Bert" required />
                     </label>
                 </p>
 
                 <p class="row">
                     <label for="parents_email">
                         <span class="required">Parent's Email: </span>
-                        <input type="email" id="parents_email" name="parents_email" placeholder="dannysmum@phagedesign.co.uk" required />
+                        <input type="email" id="parents_email" name="parents_email" placeholder="bert@bert-online.co.uk" required />
                     </label>
                 </p>
 
@@ -100,14 +100,14 @@
                 <p class="row">
                     <label for="emergency_name">
                         <span class="required">Emergency Contact Name: </span>
-                        <input type="text" id="emergency_name" name="emergency_name" placeholder="Betty" required />
+                        <input type="text" id="emergency_name" name="emergency_name" placeholder="Cookie" required />
                     </label>
                 </p>
 
                 <p class="row">
                     <label for="emergency_email">
                         <span class="required">Emergency Contact Email: </span>
-                        <input type="email" id="emergency_email" name="emergency_email" placeholder="dannysdad@phagedesign.co.uk" required />
+                        <input type="email" id="emergency_email" name="emergency_email" placeholder="cookie@wheresmycookie.co.uk" required />
                     </label>
                 </p>
 
