@@ -1027,7 +1027,7 @@ so, the font-adjusting class can resize things based on the quotes length
 Two-Col-Feature
 ------------------------------------------------------------------------------------------------ */
 .two-col-feature { overflow: hidden; }
-.two-col-feature-wrap { }
+.two-col-feature-wrap { width: 100%; }
 .two-col-feature-col1 { padding-left: 40px; padding-right: 40px; }
 .two-col-feature-col2 { }
 .two-col-feature-arrow:after { content: ""; width: 30px; height: 30px; background-color: inherit; display: block; position: absolute; top: 47%; right: -8px; z-index: 100; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
