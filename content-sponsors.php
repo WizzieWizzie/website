@@ -19,7 +19,7 @@
                     </a>
                 </li>
                 <li class="li-sponsor-lenovo">
-                    <a href="www.lenovo.com/" target="_blank">
+                    <a href="http://www.lenovo.com/" target="_blank">
                         <img src="<?php echo get_template_directory_uri() ?>/images/sponsors/lenovo@2x.png" alt="Lenovo" />
                     </a>
                 </li>
