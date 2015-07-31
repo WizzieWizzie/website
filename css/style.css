@@ -452,7 +452,7 @@ section { width: 100%; padding: 0 60px; }
     .li-sponsor-ee { width: 94px; }
     .li-sponsor-islington { width: 255px; }
     .li-sponsor-krome { width: 190px; position: relative; top: 0px; }
-    .module-sponsors ul li.li-sponsor-krome a img { height: 100px; }
+    .module-sponsors ul li.li-sponsor-krome a img { max-width: 300px; height: 100px; width: auto; }
 /*
     ``````````````````````````````````````````````````````````````````````````````
 */
@@ -858,7 +858,7 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
             margin-bottom: -60px;
         }
 
-    .module-sponsors .wrap ul li.li-sponsor-krome a img { max-height: 100px; }
+    .module-sponsors .wrap ul li.li-sponsor-krome a img { max-height: 100px; width: auto; }
     .li-sponsor-krome { width: 190px; position: relative; top: 0px; }
 }
 
