@@ -362,14 +362,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:madebydavid/wizziewizziewptheme.git",
-                "reference": "cbdac7916bbb69a9f9c80ace32b88089d4720674"
+                "reference": "7ef0c85087f2cd8753951298547503d29d18348f"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
             "description": "Wizzie Wizzie WP theme",
-            "time": "2015-07-31 13:28:44"
+            "time": "2015-07-31 14:15:03"
         },
         {
             "name": "mustache/mustache",
@@ -606,7 +606,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v2.7.2",
+            "version": "v2.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
