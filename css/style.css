@@ -451,7 +451,8 @@ section { width: 100%; padding: 0 60px; }
     .li-sponsor-lenovo { width: 245px; }
     .li-sponsor-ee { width: 94px; }
     .li-sponsor-islington { width: 255px; }
-    .li-sponsor-krome { width: 190px; position: relative; top: 5px; }
+    .li-sponsor-krome { width: 190px; position: relative; top: 0px; }
+    .module-sponsors ul li.li-sponsor-krome a img { height: 100px; }
 /*
     ``````````````````````````````````````````````````````````````````````````````
 */
@@ -840,7 +841,7 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
         .module-sponsors a[data-next] { display: none !important; }
         .module-sponsors .wrap { position: relative; width: 100%; }
         .module-sponsors .wrap ul { position: relative; margin: 0 auto; padding-bottom: 10px; }
-        .module-sponsors .wrap ul li { padding: 5px; display: block; margin: 0px; text-align: center; border-bottom: 2px solid #F9F8F8; width: 50%; margin: 0 auto; }
+        .module-sponsors .wrap ul li { padding: 5px; display: block; margin: 0px; text-align: center; border-bottom: 2px solid #F9F8F8; width: 100%; margin: 0 auto; }
         .module-sponsors .wrap ul li:last-of-type { border-bottom: 0px; }
         .module-sponsors .wrap ul li a { display: table; margin: 0 auto; text-align: center; }
         .module-sponsors .wrap ul li a img { max-height: 75px; padding: 7px; }
@@ -857,7 +858,7 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
             margin-bottom: -60px;
         }
 
-
+    .module-sponsors .wrap ul li.li-sponsor-krome a img { max-height: 100px; }
     .li-sponsor-krome { width: 190px; position: relative; top: 0px; }
 }
 
