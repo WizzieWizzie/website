@@ -424,8 +424,6 @@ WIZZ.quotesSlider = function(){
 
     $sponsorsListNext.on('click', function(e) {
 
-        console.log(e);
-
         $sponsorsList.velocity({
             left: "+=" + $current.outerWidth(),
         }, {
@@ -532,8 +530,6 @@ WIZZ.fontAdjust = function(){
     $.each($('*[data-characters]'), function(){
 
         chars = $(this).data('characters');
-
-        console.log(chars);
 
         if (chars > 200) { fontSizingClass = "font-auto-adjust--smaller"; }
         if (chars > 300) { fontSizingClass = "font-auto-adjust--tiny"; }

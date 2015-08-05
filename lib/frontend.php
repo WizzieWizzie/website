@@ -304,7 +304,9 @@ function news_pagingation() {
 */
 function get_colour_scheme(){
     # wp_reset_query();
-    if (get_field('colour_scheme')) return "color-scheme-".get_field('colour_scheme');
+    if (class_exists('Acf')) {
+        if (get_field('colour_scheme')) return "color-scheme-".get_field('colour_scheme');
+    }
 }
 
 
