@@ -10,7 +10,7 @@
     "repositories":[
         {
             "type":"composer",
-            "url":"http://wpackagist.org"
+            "url":"https://wpackagist.org"
         },
         {
             "type": "vcs",
@@ -37,13 +37,12 @@
 
         "composer/installers": "~1.0",
         "johnpbloch/wordpress": "4.*",
-        "wp-cli/wp-cli": "*",
 
         "wpackagist-plugin/wordpress-importer": "0.6",
         "wpackagist-plugin/disable-comments": "*",
         "wpackagist-plugin/wp-mail-smtp": "*",
         "wpackagist-plugin/advanced-custom-fields": "*",
-        "wpackagist-plugin/better-wp-security": "*",
+        "wpackagist-plugin/better-wp-security": "5.4.5",
         "wpackagist-plugin/google-analytics-for-wordpress": "*",
         "wpackagist-plugin/hide-admin-bar-from-non-admins": "*",
         "wpackagist-plugin/simple-custom-post-order": "2.3",
