@@ -81,8 +81,10 @@
     <div class="vp-wrapper">
         <div class="ribbon-wrapper-green">
             <div class="ribbon-green">
-                Autumn Term
-                <span>Sept. 17th until Dec. 3rd</span>
+                <a href="sign-up/#signUp">
+                    Autumn Term
+                    <span>Sept. 17th until Dec. 3rd</span>
+                </a>
             </div>
         </div>
 
