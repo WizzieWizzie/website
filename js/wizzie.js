@@ -334,6 +334,10 @@ WIZZ.formUI = function(){
     var validateFront = function (form) {
 
         if (true === form.parsley().isValid()) {
+
+            // disable the form fields so people dont submit twice
+            form.find('input:not(:disabled)').prop('disabled', true);
+
             $('.bs-callout-info').removeClass('hidden');
             $('.bs-callout-warning').addClass('hidden');
 
@@ -344,7 +348,7 @@ WIZZ.formUI = function(){
 
             $.post(ajaxurl, data, function(response) {
                 alert(response);
-                //location.reload();
+                location.reload();
             });
             
         } else {
