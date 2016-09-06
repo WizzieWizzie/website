@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bf1e29590bd6ba66c03e5fb40ecdf720",
-    "content-hash": "4da40341e8b062aaf1646b2126aeb4df",
+    "hash": "67e6a478b1898926cd45fce6e77797dd",
+    "content-hash": "cd39e468479c03f9e22d5adff000d69f",
     "packages": [
         {
             "name": "asimlqt/php-google-spreadsheet-client",
@@ -346,7 +346,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/madebydavid/advanced-custom-fields-wpcli.git",
+                "url": "git@github.com:madebydavid/advanced-custom-fields-wpcli.git",
                 "reference": "620c87803082250c7265396cdc74026011f1191f"
             },
             "dist": {
@@ -371,14 +371,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:madebydavid/wizziewizziewptheme.git",
-                "reference": "040645ca424017134b9ff4b936e8af7df063630e"
+                "reference": "993b92dd8aaccc25a16e4c410d1e543e24bd0048"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
             "description": "Wizzie Wizzie WP theme",
-            "time": "2016-08-23 22:29:47"
+            "time": "2016-09-06 22:05:35"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -500,7 +500,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.8.zip",
-                "reference": null,
+                "reference": "tags/4.4.8",
                 "shasum": null
             },
             "require": {
@@ -520,7 +520,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/better-wp-security.5.4.5.zip",
-                "reference": null,
+                "reference": "tags/5.4.5",
                 "shasum": null
             },
             "require": {
@@ -540,7 +540,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/disable-comments.1.5.1.zip",
-                "reference": null,
+                "reference": "tags/1.5.1",
                 "shasum": null
             },
             "require": {
@@ -560,7 +560,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.5.2.zip",
-                "reference": null,
+                "reference": "tags/5.5.2",
                 "shasum": null
             },
             "require": {
@@ -580,7 +580,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/hide-admin-bar-from-non-admins.1.0.zip",
-                "reference": null,
+                "reference": "tags/1.0",
                 "shasum": null
             },
             "require": {
@@ -600,7 +600,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/simple-custom-post-order.zip",
-                "reference": null,
+                "reference": "trunk",
                 "shasum": null
             },
             "require": {
@@ -620,7 +620,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.zip",
-                "reference": null,
+                "reference": "tags/0.6",
                 "shasum": null
             },
             "require": {
@@ -640,7 +640,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.0.9.6.zip",
-                "reference": null,
+                "reference": "tags/0.9.6",
                 "shasum": null
             },
             "require": {

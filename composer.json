@@ -13,23 +13,23 @@
             "url":"https://wpackagist.org"
         },
         {
-            "type": "vcs",
+            "type": "git",
             "url":"git@github.com:madebydavid/advanced-custom-fields-repeater.git"
         },
         {
-            "type": "vcs",
+            "type": "git",
             "url":"git@bitbucket.org:madebydavid/wizziewizziewptheme.git"
         },
         {
-            "type": "vcs",
+            "type": "git",
             "url":"git@bitbucket.org:madebydavid/acf-flexible-content.git"
         },
         {
-            "type": "vcs",
+            "type": "git",
             "url":"git@bitbucket.org:madebydavid/acf-options-page.git"
         },
         {
-            "type": "vcs",
+            "type": "git",
             "url": "git@github.com:madebydavid/advanced-custom-fields-wpcli.git"
         }
     ],
