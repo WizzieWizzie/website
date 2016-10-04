@@ -318,7 +318,7 @@ function get_colour_scheme(){
     Populate a Location field with available
     location options using the locations custom post type
 */
-function form_get_location_options() {
+function form_get_location_options($disable = false) {
 
     $return = "";
 
@@ -329,11 +329,15 @@ function form_get_location_options() {
 
     $query = new WP_QUERY($args);
 
-    $disabledSignup = array(
-        'Elizabeth House &#8211; N5',
-        'West Library N1',
-        'North Library N7'
-    );
+    if ($disable) {
+        $disabledSignup = array(
+            'Elizabeth House &#8211; N5',
+            'West Library N1',
+            'North Library N7'
+        );
+    } else {
+        $disabledSignup = array();
+    }
 
     while ($query->have_posts()) {
         $query->the_post();
