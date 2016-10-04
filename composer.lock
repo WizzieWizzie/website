@@ -376,14 +376,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:madebydavid/wizziewizziewptheme.git",
-                "reference": "e0b9aac1de3782421f446fae78d6a4fdfa298295"
+                "reference": "bfc5659b15396e976fd9d793e6bae8c03197e8b9"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
             "description": "Wizzie Wizzie WP theme",
-            "time": "2016-09-13 14:50:59"
+            "time": "2016-10-04 13:25:04"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -496,15 +496,15 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "4.4.8",
+            "version": "4.4.10",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/4.4.8"
+                "reference": "tags/4.4.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.8.zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.10.zip",
                 "reference": null,
                 "shasum": null
             },
