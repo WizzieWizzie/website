@@ -1088,3 +1088,10 @@ Term Date Banner / Sash / Ribbon thing
     font-size: 11px;
     display: block;
 }
+
+.ribbon-green a,
+.ribbon-green a:hover,
+.ribbon-green a:visited {
+	text-decoration: none;
+	color: #333;
+}

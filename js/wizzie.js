@@ -335,9 +335,6 @@ WIZZ.formUI = function(){
 
         if (true === form.parsley().isValid()) {
 
-            // disable the form fields so people dont submit twice
-            form.find('input:not(:disabled)').prop('disabled', true);
-
             $('.bs-callout-info').removeClass('hidden');
             $('.bs-callout-warning').addClass('hidden');
 
@@ -345,6 +342,10 @@ WIZZ.formUI = function(){
                 action: form.data('ajaxAction'),
                 data: form.serialize()
             };
+
+            // disable the form fields so people dont submit twice
+            // this must be done after the serialising!
+            form.find('input:not(:disabled)').prop('disabled', true);
 
             $.post(ajaxurl, data, function(response) {
                 alert(response);

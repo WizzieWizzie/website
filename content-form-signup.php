@@ -1,4 +1,4 @@
-<section class="form-generic signUpForm">
+<section id="signUp" class="form-generic signUpForm">
 
     <div class="g-row">
 
@@ -23,7 +23,7 @@
                         <select id="student_location" name="student_location" required>
                             <option value="">Please select a location</option>
                             <?php
-                                echo form_get_location_options();
+                                echo form_get_location_options(true);
                             ?>
                         </select>
                     </label>
