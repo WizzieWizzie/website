@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5dca80e630e762eab6795c3a3fa35cb4",
-    "content-hash": "a1a1fac114287e069ea49b6a0e786510",
+    "hash": "a6e301b00864824660786e813faadf50",
+    "content-hash": "dceeb541b55da6058378e20b66e5a645",
     "packages": [
         {
             "name": "asimlqt/php-google-spreadsheet-client",
@@ -210,16 +210,16 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.6.1",
+            "version": "4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "aca8da84b4a699b16b8bcc96d2bc794a4c7b5ae3"
+                "reference": "b327faa6feea3a4058178dee7ac8b512bd957e92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/aca8da84b4a699b16b8bcc96d2bc794a4c7b5ae3",
-                "reference": "aca8da84b4a699b16b8bcc96d2bc794a4c7b5ae3",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/b327faa6feea3a4058178dee7ac8b512bd957e92",
+                "reference": "b327faa6feea3a4058178dee7ac8b512bd957e92",
                 "shasum": ""
             },
             "require": {
@@ -243,7 +243,7 @@
                 "blog",
                 "cms"
             ],
-            "time": "2016-09-07 15:01:47"
+            "time": "2016-12-06 18:46:46"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -376,14 +376,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:madebydavid/wizziewizziewptheme.git",
-                "reference": "bfc5659b15396e976fd9d793e6bae8c03197e8b9"
+                "reference": "30859b866fb65c82bb05c1a3f096f6aea51216df"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
             "description": "Wizzie Wizzie WP theme",
-            "time": "2016-10-04 13:25:04"
+            "time": "2016-12-16 17:13:03"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -496,15 +496,15 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "4.4.10",
+            "version": "4.4.11",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/4.4.10"
+                "reference": "tags/4.4.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.10.zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.11.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -536,15 +536,15 @@
         },
         {
             "name": "wpackagist-plugin/disable-comments",
-            "version": "1.5.2",
+            "version": "2.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/disable-comments/",
-                "reference": "tags/1.5.2"
+                "reference": "tags/2.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/disable-comments.1.5.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/disable-comments.2.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -556,15 +556,15 @@
         },
         {
             "name": "wpackagist-plugin/google-analytics-for-wordpress",
-            "version": "5.5.2",
+            "version": "5.5.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
-                "reference": "tags/5.5.2"
+                "reference": "tags/5.5.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.5.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.5.4.zip",
                 "reference": null,
                 "shasum": null
             },

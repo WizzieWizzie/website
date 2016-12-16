@@ -13,29 +13,30 @@
             "url":"https://wpackagist.org"
         },
         {
-            "type": "vcs", "no-api": "true",
+            "type": "git",
             "url":"git@github.com:madebydavid/advanced-custom-fields-repeater.git"
         },
         {
-            "type": "vcs", "no-api": "true",
+            "type": "git",
             "url":"git@bitbucket.org:madebydavid/wizziewizziewptheme.git"
         },
         {
-            "type": "vcs", "no-api": "true",
+            "type": "git",
             "url":"git@bitbucket.org:madebydavid/acf-flexible-content.git"
         },
         {
-            "type": "vcs", "no-api": "true",
+            "type": "git",
             "url":"git@bitbucket.org:madebydavid/acf-options-page.git"
         },
         {
-            "type": "vcs", "no-api": "true",
+            "type": "git",
             "url": "git@github.com:madebydavid/advanced-custom-fields-wpcli.git"
         }
     ],
     "require": {
 
         "composer/installers": "~1.0",
+        "composer-plugin-api": "^1.0",
         "johnpbloch/wordpress": "4.*",
 
         "wpackagist-plugin/wordpress-importer": "0.6",
@@ -81,5 +82,8 @@
     "scripts": {
         "post-install-cmd": [
         ]
+    },
+    "config": {
+        "secure-http": false
     }
 }
