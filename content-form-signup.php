@@ -23,7 +23,7 @@
                         <select id="student_location" name="student_location" required>
                             <option value="">Please select a location</option>
                             <?php
-                                echo form_get_location_options(true);
+                                echo form_get_location_options(false);
                             ?>
                         </select>
                     </label>
