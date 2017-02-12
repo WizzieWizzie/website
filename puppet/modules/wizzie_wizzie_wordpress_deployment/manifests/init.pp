@@ -1,7 +1,7 @@
 
 class wizzie_wizzie_wordpress_deployment($server, $user) {
    
-    ensure_packages( ["git", "python-pip"] )
+    ensure_packages( ["git"] )
 
     exec { "setup wizzie-wizzie blog project root":
         command         => "mkdir -p /opt/wizzie-wizzie-wordpress "
@@ -33,7 +33,7 @@ class wizzie_wizzie_wordpress_deployment($server, $user) {
     exec { "change permissions on content":
         command         => "chown -R www-data:www-data *",
         cwd             => "/opt/wizzie-wizzie-wordpress",
-        require         =>  Exec["sync the content"]
+        require         =>  Exec["clone the git repo"]
     }
 
 
