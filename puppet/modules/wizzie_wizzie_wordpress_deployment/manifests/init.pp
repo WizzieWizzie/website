@@ -24,7 +24,7 @@ class wizzie_wizzie_wordpress_deployment($server, $user) {
     }
 
     exec { "run composer install" :
-        serverironment     => ["COMPOSER_HOME=/root"],
+        environment     => ["COMPOSER_HOME=/root"],
         command         => "composer install",
         cwd             => "/opt/wizzie-wizzie-wordpress",
         require         =>  Exec["clone the git repo"]
