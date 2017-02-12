@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# this is a bit of a hack - we wait 120 secs after boot before setting the
+# hostname - this gives the machine time to finish running cloud-init which
+# will set the initial hostname - this script will then modify it
+sleep 120
+
+# prefix we add to the aws given hostname
+WW_HOST_PREFIX='wizzie-wizzie-<%=@server%>-'
+CURRENT_HOSTNAME=`hostname`
+
+# check we have not previously set the hostname
+if [[ $CURRENT_HOSTNAME != *"$WW_HOST_PREFIX"* ]];then
+
+    # build the hostname
+    NEW_HOSTNAME="$WW_HOST_PREFIX$CURRENT_HOSTNAME"
+
+    # add to /etc/hosts
+    FILE_LINE="127.0.1.1 $NEW_HOSTNAME"
+    FILE=/etc/hosts
+    grep -q "$FILE_LINE" "$FILE" || echo "$FILE_LINE" >> "$FILE"
+
+    # set the hostname
+    echo $NEW_HOSTNAME > /etc/hostname
+    hostname $NEW_HOSTNAME
+    /etc/init.d/hostname.sh start
+
+    # restart syslog so it too picks up the new hostname
+    sudo /etc/init.d/rsyslog restart
+
+fi
