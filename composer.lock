@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a6e301b00864824660786e813faadf50",
-    "content-hash": "dceeb541b55da6058378e20b66e5a645",
+    "content-hash": "01ca91c335293d7d37d2185ea37a53e6",
     "packages": [
         {
             "name": "asimlqt/php-google-spreadsheet-client",
@@ -56,7 +55,7 @@
                 "google",
                 "spreadsheet"
             ],
-            "time": "2015-12-13 15:13:17"
+            "time": "2015-12-13T15:13:17+00:00"
         },
         {
             "name": "composer/installers",
@@ -163,7 +162,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-08-13 20:53:52"
+            "time": "2016-08-13T20:53:52+00:00"
         },
         {
             "name": "google/apiclient",
@@ -206,20 +205,20 @@
             "keywords": [
                 "google"
             ],
-            "time": "2016-06-06 21:22:48"
+            "time": "2016-06-06T21:22:48+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.7",
+            "version": "4.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "b327faa6feea3a4058178dee7ac8b512bd957e92"
+                "reference": "ac7b1792641d1fb61cb2901db292903b31694057"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/b327faa6feea3a4058178dee7ac8b512bd957e92",
-                "reference": "b327faa6feea3a4058178dee7ac8b512bd957e92",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/ac7b1792641d1fb61cb2901db292903b31694057",
+                "reference": "ac7b1792641d1fb61cb2901db292903b31694057",
                 "shasum": ""
             },
             "require": {
@@ -243,7 +242,7 @@
                 "blog",
                 "cms"
             ],
-            "time": "2016-12-06 18:46:46"
+            "time": "2017-01-26T18:32:19+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -291,7 +290,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2015-06-11 15:15:30"
+            "time": "2015-06-11T15:15:30+00:00"
         },
         {
             "name": "madebydavid/acf-flexible-content",
@@ -375,7 +374,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@bitbucket.org:madebydavid/wizziewizziewptheme.git",
+                "url": "git@bitbucket.org:wizziewizzie/website-theme.git",
                 "reference": "2691c9ddbe4c9daa43f35d68ec9f2cd6a340cfc4"
             },
             "require": {
@@ -435,7 +434,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2014-09-20 07:17:36"
+            "time": "2014-09-20T07:17:36+00:00"
         },
         {
             "name": "twig/twig",
@@ -492,7 +491,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-06-06 23:31:24"
+            "time": "2015-06-06T23:31:24+00:00"
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
@@ -596,7 +595,7 @@
         },
         {
             "name": "wpackagist-plugin/simple-custom-post-order",
-            "version": "2.3",
+            "version": "2.3.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/simple-custom-post-order/",
@@ -636,15 +635,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-mail-smtp",
-            "version": "0.9.6",
+            "version": "0.10.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-mail-smtp/",
-                "reference": "tags/0.9.6"
+                "reference": "tags/0.10.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.0.9.6.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.0.10.1.zip",
                 "reference": null,
                 "shasum": null
             },
