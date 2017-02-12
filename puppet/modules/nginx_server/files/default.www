@@ -3,7 +3,7 @@ server {
     listen 80;
     client_max_body_size 100m;
 
-    root /opt/buyer-price-blog;
+    root /opt/wizzie-wizzie-wordpress;
     index index.php;
 
     location / {
