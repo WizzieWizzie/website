@@ -375,14 +375,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:wizziewizzie/website-theme.git",
-                "reference": "2691c9ddbe4c9daa43f35d68ec9f2cd6a340cfc4"
+                "reference": "d5f03882ed8afce6a195ba30c2e750369804d971"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
             "description": "Wizzie Wizzie WP theme",
-            "time": "2016-12-16 17:26:46"
+            "time": "2017-02-13 16:35:59"
         },
         {
             "name": "swiftmailer/swiftmailer",
