@@ -6,10 +6,20 @@ server {
     root /opt/wizzie-wizzie-wordpress;
     index index.php;
 
+    location /elb-status {
+        access_log off;
+        return 200;
+    }
+
     location / {
+
+        if ( $http_x_forwarded_proto != 'https' ) {
+            return 301 https://$host$request_uri;
+        }
+
         try_files $uri $uri/ /index.php?q=$uri&$args;
     }
-    
+
     location ~ \.php$ {
         try_files $uri =404;
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
