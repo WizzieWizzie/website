@@ -56,8 +56,8 @@ function wizzie_stylesheets(){
             'respond'      => get_stylesheet_directory_uri().'/css/respond.css',
             'styles'       => get_stylesheet_directory_uri().'/css/style.css',
             'owl'          => get_stylesheet_directory_uri().'/js/owl-carousel/owl.carousel.css',
-            'roboto'       => 'http://fonts.googleapis.com/css?family=Roboto:400,100,300,500',
-            'amatic'       => 'http://fonts.googleapis.com/css?family=Amatic+SC:400,700'
+            'roboto'       => 'https://fonts.googleapis.com/css?family=Roboto:400,100,300,500',
+            'amatic'       => 'https://fonts.googleapis.com/css?family=Amatic+SC:400,700'
         ),
 
         'homepage' => array()
