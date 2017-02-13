@@ -1064,9 +1064,9 @@ Term Date Banner / Sash / Ribbon thing
     text-align: center;
     text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
     -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
     position: relative;
     padding: 7px 0;
     left: -45px;
