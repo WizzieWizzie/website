@@ -6,13 +6,15 @@ server {
     root /opt/wizzie-wizzie-wordpress;
     index index.php;
 
+    # healthcheck for the AWS ELB
     location /elb-status {
         access_log off;
         return 200;
     }
 
     location / {
-
+    
+        # force redirect of http to https
         if ( $http_x_forwarded_proto != 'https' ) {
             return 301 https://$host$request_uri;
         }

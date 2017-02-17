@@ -2,13 +2,10 @@ class wizzie_wizzie_wordpress_deployment($server, $user, $group) {
    
   ensure_packages( ["git"] )
 
-  exec { "setup wizzie-wizzie blog project root":
-    command => "mkdir -p /opt/wizzie-wizzie-wordpress"
-  }
-
-  exec { "change owner of /opt/wizzie-wizzie-wordpress":
-    command => "chown -R $user:$user /opt/wizzie-wizzie-wordpress",
-    require => Exec["setup wizzie-wizzie blog project root"]
+  file { "/opt/wizzie-wizzie-wordpress":
+    ensure => "directory",
+    owner => "$user",
+    group => "$group",
   }
 
   # todo remove the .git dir
@@ -18,19 +15,13 @@ class wizzie_wizzie_wordpress_deployment($server, $user, $group) {
     require =>  [
       Class["wizzie_wizzie_deployment_keys"],
       Package["git"],
-      Exec["change owner of /opt/wizzie-wizzie-wordpress"]
+      File["/opt/wizzie-wizzie-wordpress"]
     ]
   }
 
   exec { "run composer install" :
     environment => ["COMPOSER_HOME=/root"],
     command => "composer install",
-    cwd => "/opt/wizzie-wizzie-wordpress",
-    require => Exec["clone the git repo"]
-  }
-
-  exec { "change permissions on content":
-    command => "chown -R $user:$group *",
     cwd => "/opt/wizzie-wizzie-wordpress",
     require => Exec["clone the git repo"]
   }

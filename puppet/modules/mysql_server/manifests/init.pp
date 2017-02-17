@@ -1,12 +1,11 @@
 class mysql_server {
 
-    $mysqlPackages = [
-        'mysql-server',
-    ]
-    package { 
-        $mysqlPackages:
-            ensure => 'installed',
+    ensure_packages( ['mysql-server'] )
+
+    service { 'mysql':
+        ensure      => 'running',
+        enable      => true,
+        subscribe   => Package['mysql-server'],
     }
 
 }
-

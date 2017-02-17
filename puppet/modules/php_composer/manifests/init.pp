@@ -4,8 +4,8 @@ define php_composer() {
     ensure_packages( ['wget', 'php5-cli'] )
 
     file { '/usr/local/bin/install-composer.sh':
-        source => 'puppet:///modules/php_composer/install-composer.sh',
-        mode => '755'
+        source  => 'puppet:///modules/php_composer/install-composer.sh',
+        mode    => '755'
     }
 
     exec { 'run install-composer.sh':
@@ -16,5 +16,4 @@ define php_composer() {
             File['/usr/local/bin/install-composer.sh']
         ]
     }
-
 }

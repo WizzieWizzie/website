@@ -3,28 +3,26 @@ Exec { path => [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/' ] }
 
 class www {
 
-    ensure_packages( ['git'] )
-
     hostname { 'set the www server hostname':
-      server => 'www'
+      server  => 'www'
     }
 
     include mysql_server
 
     class { 'nginx_server':
-      server => 'www'
+      server  => 'www'
     }
 
     include wordpress_server
 
     class { 'wizzie_wizzie_deployment_keys':
-      user => 'admin'
+      user    => 'admin'
     }
 
     class { 'wizzie_wizzie_wordpress_deployment':
-      user => 'admin',
-      group => 'www-data',
-      server => 'www',
+      user    => 'admin',
+      group   => 'www-data',
+      server  => 'www',
       require => [
         Class['wordpress_server'],
         Class['wizzie_wizzie_deployment_keys']

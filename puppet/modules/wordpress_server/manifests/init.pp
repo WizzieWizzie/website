@@ -23,9 +23,10 @@ class wordpress_server() {
         require         => File['/etc/php5/mods-available/max-upload-size-100M.ini'],
     }
 
-    exec {'php5-fpm restart':
-        command         => '/etc/init.d/php5-fpm restart',
-        require         => File['/etc/php5/fpm/conf.d/30-max-upload-size-100M.ini'],
+    service { 'php5-fpm':
+        ensure          => 'running',
+        enable          => true,
+        subscribe       => File['/etc/php5/fpm/conf.d/30-max-upload-size-100M.ini'],
     }
 
 }

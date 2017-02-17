@@ -1,13 +1,6 @@
 class wizzie_wizzie_deployment_keys($user) {
 
-    $deploymentPackages = [
-        "keychain",
-        "acl"
-    ]
-    package { 
-        $deploymentPackages:
-            ensure => "installed",
-    }
+    ensure_packages( ["acl", "keychain"] )
 
     file { "/home/$user/.ssh":
         ensure          => "directory",
