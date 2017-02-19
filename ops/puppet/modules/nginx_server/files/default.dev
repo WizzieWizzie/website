@@ -36,10 +36,6 @@ server {
         deny all;
     }
 
-    location /content/uploads/ {
-        proxy_pass https://www.wizziewizzie.org/content/uploads/;
-    }
-
     location / {
         try_files $uri $uri/ /index.php?q=$uri&$args;
     }
