@@ -3,23 +3,21 @@
 // Load database info and local development parameters
 // ===================================================
 if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
-	define( 'WP_LOCAL_DEV', true );
 	include( dirname( __FILE__ ) . '/local-config.php' );
 } else {
-	define( 'WP_LOCAL_DEV', true );
 	define( 'DB_NAME', 'Wizzie' );
 	define( 'DB_USER', 'root' );
 	define( 'DB_PASSWORD', '' );
-	define( 'DB_HOST', 'localhost' ); 
-	define( 'WP_HOME', 'http://local.wizziewizzie.org');
-	define( 'WP_SITEURL', 'http://local.wizziewizzie.org/wordpress');
+	define( 'DB_HOST', 'localhost' );
+	define( 'WP_HOME', 'http://localhost:8080');
+	define( 'WP_SITEURL', 'http://localhost:8080/wordpress');
 }
 
 // ========================
 // Custom Content Directory
 // ========================
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
-define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content' );
+define( 'WP_CONTENT_URL', WP_HOME . '/content' );
 
 // ================================================
 // You almost certainly do not want to change these

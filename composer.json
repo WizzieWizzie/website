@@ -58,7 +58,8 @@
         "google/apiclient": "1.1.*",
 
         "twig/twig": "1.18.*",
-        "swiftmailer/swiftmailer": "5.2.2"
+        "swiftmailer/swiftmailer": "5.2.2",
+        "wp-cli/wp-cli": "^1.1"
         
     },
     "autoload": {
