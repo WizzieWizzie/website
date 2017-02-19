@@ -1,10 +1,54 @@
 server {
-    # this is the wordpress host
     listen 80;
+    server_name wizziewizzie.org;
+
+    # healthcheck for the AWS ELB
+    location /elb-status {
+        access_log off;
+        return 200;
+    }
+
+    location / {
+        return 301 https://www.wizziewizzie.org$request_uri;
+    }
+}
+
+
+server {
+    listen 80;
+    server_name www.wizziewizzie.org;
     client_max_body_size 100m;
 
     root /opt/wizzie-wizzie-wordpress;
     index index.php;
+
+    location /volunteering {
+        rewrite ^/volunteering$ /volunteer redirect;
+    }
+
+    location /README.md {
+        deny all;
+    }
+
+    location /local-setup.sh {
+        deny all;
+    }
+
+    location /composer.json {
+        deny all;
+    }
+
+    location /composer.lock {
+        deny all;
+    }
+
+    location /.git {
+        deny all;
+    }
+
+    location /content/data {
+        deny all;
+    }
 
     # healthcheck for the AWS ELB
     location /elb-status {
