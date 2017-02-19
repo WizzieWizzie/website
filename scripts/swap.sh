@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# enables the swapfile on aws micro instances
+# enables the swapfile - needed on the micro instance and the vagrant guest
 
 sudo dd if=/dev/zero of=/swapfile bs=1M count=1024
 sudo mkswap /swapfile
