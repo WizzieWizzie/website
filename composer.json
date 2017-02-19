@@ -18,10 +18,6 @@
         },
         {
             "type": "git",
-            "url":"git@bitbucket.org:wizziewizzie/website-theme.git"
-        },
-        {
-            "type": "git",
             "url":"git@bitbucket.org:madebydavid/acf-flexible-content.git"
         },
         {
@@ -49,7 +45,6 @@
         "wpackagist-plugin/simple-custom-post-order": "2.3.1",
 
         "madebydavid/advanced-custom-fields-repeater": "master-dev",
-        "madebydavid/wizzie-theme": "master-dev",
         "madebydavid/acf-flexible-content": "master-dev",
         "madebydavid/acf-options-page": "master-dev",
         "madebydavid/advanced-custom-fields-wpcli": "master-dev",
