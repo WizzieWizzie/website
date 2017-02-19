@@ -30,7 +30,7 @@ class wizzie_wizzie_wordpress_deployment($server, $user, $group) {
     source => "puppet:///modules/wizzie_wizzie_wordpress_deployment/local-config.php.$server",
     owner => "$user",
     group => "$user",
-    mode => "775",
+    mode => "664",
     require => Exec["clone the git repo"]
   }
 
