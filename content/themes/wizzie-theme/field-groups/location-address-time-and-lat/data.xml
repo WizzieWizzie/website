@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+  xmlns:excerpt="http://wordpress.org/export/1.1/excerpt/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:wp="http://wordpress.org/export/1.1/">
+
+  <channel>
+    <title>Wizzie Wizzie Computer Coding Club</title>
+    <link>http://beta.wizziewizzie.org</link>
+    <description></description>
+    <language></language>
+    <wp:wxr_version>1.1</wp:wxr_version>
+    <wp:base_site_url>http://beta.wizziewizzie.org</wp:base_site_url>
+    <wp:base_blog_url>http://beta.wizziewizzie.org</wp:base_blog_url>	<wp:author><wp:author_id>2</wp:author_id><wp:author_login>admin</wp:author_login><wp:author_email>larsf2005@gmail.com</wp:author_email><wp:author_display_name><![CDATA[admin]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
+	<wp:author><wp:author_id>3</wp:author_id><wp:author_login>david</wp:author_login><wp:author_email>sutherland.dave@gmail.com</wp:author_email><wp:author_display_name><![CDATA[David Sutherland]]></wp:author_display_name><wp:author_first_name><![CDATA[David]]></wp:author_first_name><wp:author_last_name><![CDATA[Sutherland]]></wp:author_last_name></wp:author>
+	<wp:author><wp:author_id>5</wp:author_id><wp:author_login>spencer</wp:author_login><wp:author_email>spencerkward@gmail.com</wp:author_email><wp:author_display_name><![CDATA[Spencer Ward]]></wp:author_display_name><wp:author_first_name><![CDATA[Spencer]]></wp:author_first_name><wp:author_last_name><![CDATA[Ward]]></wp:author_last_name></wp:author>
+	<wp:author><wp:author_id>6</wp:author_id><wp:author_login>paul</wp:author_login><wp:author_email>beckfordp@gmail.com</wp:author_email><wp:author_display_name><![CDATA[Paul Beckford]]></wp:author_display_name><wp:author_first_name><![CDATA[Paul]]></wp:author_first_name><wp:author_last_name><![CDATA[Beckford]]></wp:author_last_name></wp:author>
+<item>
+      <title>Location: Address, Time and Lat</title>
+      <link></link>
+      <pubDate>Wed, 03 Jun 2015 13:18:09 +0000</pubDate>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">http://localhost/wizzie/?post_type=acf&#038;p=56</guid>
+      <wp:post_id>56</wp:post_id>
+      <wp:post_date>2015-06-03 13:18:09</wp:post_date>
+      <wp:post_date_gmt>2015-06-03 12:18:09</wp:post_date_gmt>
+      <wp:comment_status>closed</wp:comment_status>
+      <wp:ping_status>closed</wp:ping_status>
+      <wp:post_name>acf_location-address-time-and-lat</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>acf</wp:post_type>
+      <wp:post_password></wp:post_password>
+    
+      <wp:postmeta>
+        <wp:meta_key>_edit_last</wp:meta_key>
+        <wp:meta_value><![CDATA[2]]></wp:meta_value>
+      </wp:postmeta>
+    
+      <wp:postmeta>
+        <wp:meta_key>field_556ef08df29ee</wp:meta_key>
+        <wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_556ef08df29ee";s:5:"label";s:7:"Address";s:4:"name";s:7:"address";s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";s:0:"";s:10:"formatting";s:2:"br";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+      </wp:postmeta>
+    
+      <wp:postmeta>
+        <wp:meta_key>field_556ef0c3f29ef</wp:meta_key>
+        <wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_556ef0c3f29ef";s:5:"label";s:10:"Club Times";s:4:"name";s:10:"club_times";s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";s:0:"";s:10:"formatting";s:2:"br";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+      </wp:postmeta>
+    
+      <wp:postmeta>
+        <wp:meta_key>field_556ef32a655b4</wp:meta_key>
+        <wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_556ef32a655b4";s:5:"label";s:8:"Location";s:4:"name";s:8:"location";s:4:"type";s:10:"google_map";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:10:"center_lat";s:9:"51.526322";s:10:"center_lng";s:9:"-0.084298";s:4:"zoom";s:0:"";s:6:"height";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+      </wp:postmeta>
+    
+      <wp:postmeta>
+        <wp:meta_key>hide_on_screen</wp:meta_key>
+        <wp:meta_value><![CDATA[]]></wp:meta_value>
+      </wp:postmeta>
+    
+      <wp:postmeta>
+        <wp:meta_key>layout</wp:meta_key>
+        <wp:meta_value><![CDATA[default]]></wp:meta_value>
+      </wp:postmeta>
+    
+      <wp:postmeta>
+        <wp:meta_key>position</wp:meta_key>
+        <wp:meta_value><![CDATA[normal]]></wp:meta_value>
+      </wp:postmeta>
+    
+      <wp:postmeta>
+        <wp:meta_key>rule</wp:meta_key>
+        <wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:8:"location";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+      </wp:postmeta>
+    </item></channel></rss>

@@ -1,0 +1,20 @@
+{% extends "base.twig" %}
+{% block content %}
+
+<p>Dear {{ parents_name }},</p>
+
+<p>Thank you for registering for the Wizzie Wizzie Computer Coding Club (W2C3) @ {{ student_location }}</p>
+
+<p>The current term is running from Jan. 14th until Mar. 25th.</p>
+
+<p>The class times are <strong>{{ location.club_times|striptags|raw }}</strong> and the venue is: <strong>{{ location.address|striptags|raw }}</strong></p>
+ 
+<p>If you have any questions please contact Milverton Wallace <a href="mailto:milverton@gmail.com">&lt;milverton@gmail.com&gt;</a> or David Sutherland <a href="mailto:sutherland.dave@gmail.com">&lt;sutherland.dave@gmail.com&gt;</a></p>
+ 
+<p>Thank you and hope to see you there,</p>
+
+<p>Milverton &amp; David</p>
+
+<p><a href="https://twitter.com/thewizziewizzie">Follow @thewizziewizzie on Twitter</a></p>
+
+{% endblock %}
