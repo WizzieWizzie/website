@@ -1,0 +1,3 @@
+[submodule "ops"]
+	path = ops
+	url = git@bitbucket.org:wizziewizzie/ops.git
