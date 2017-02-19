@@ -1,6 +1,6 @@
-# Wizzie Wizzie Vagrant
+# Wizzie Wizzie Website
 
-## This is a Vagrant configuration for Wizzie Wizzie. 
+## This is the repository for the Wizzie Wizzie website - it is recommended to use vagrant to run and contribute to this project.
 
 ### 1. Install the dependencies if you do not already have them
 
@@ -9,7 +9,7 @@
 
 ### 2. Clone this repository into a directory
 ```bash
-$ git clone git@bitbucket.org:wizziewizzie/vagrant.git
+$ git clone git@github.com:WizzieWizzie/website.git
 $ cd vagrant
 $ git submodule update --init --recursive
 ```
