@@ -3,6 +3,8 @@ Exec { path => [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/' ] }
 
 class vagrant {
 
+  ensure_packages(['git'])
+
   include mysql_server
 
   class { 'nginx_server':
