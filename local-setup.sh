@@ -11,15 +11,17 @@ plugins=`ls -d content/plugins/*/ | sed "s/content\/plugins\/\([^\/]*\)\/.*/\1/g
 # get the theme
 theme=`ls -d content/themes/*/ | sed "s/content\/themes\/\([^\/]*\)\/.*/\1/g"`
 
-cd vendor/wp-cli/wp-cli/bin
-
-wp="./wp --path=../../../../wordpress --url=$domain"
+wp="./vendor/bin/wp --url=$domain"
 
 # reset and initialize wordpress
 $wp db reset
 $wp core install \
-    --admin_user="$adminUser" --admin_password="$adminPass" --admin_email="$adminEmail" \
-    --title="$siteTitle"
+    --url="$domain" \
+    --title="$siteTitle" \
+    --admin_user="$adminUser" \
+    --admin_password="$adminPass" \
+    --admin_email="$adminEmail"
+
 
 # activate the plugins
 for plugin in $plugins
