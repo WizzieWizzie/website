@@ -4,7 +4,7 @@
 
 ### 1. Install the dependencies if you do not already have them
 
-- VirtualBox ([Download Page](https://www.virtualbox.org/wiki/Downloads)]
+- VirtualBox ([Download Page](https://www.virtualbox.org/wiki/Downloads))
 - Vagrant ([Download Page](https://www.vagrantup.com/downloads))
 
 ### 2. Clone this repository into a directory
