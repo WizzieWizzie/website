@@ -1,8 +1,5 @@
-/local-config.php
-.buildpath
-.project
-.settings/
-vendor/
-wordpress/
-content/uploads
-content/uploads/*
+/website/local-config.php
+/website/vendor/
+/website/wordpress/
+/website/content/uploads
+/.vagrant
