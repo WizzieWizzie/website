@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d708dd5878636e5dcce6f3d1aaf6127",
+    "content-hash": "6588aa553b1dd5e8afdb16b9ab14f29c",
     "packages": [
         {
             "name": "asimlqt/php-google-spreadsheet-client",
@@ -649,7 +649,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@github.com:madebydavid/advanced-custom-fields-repeater.git",
+                "url": "git@bitbucket.org:madebydavid/advanced-custom-fields-repeater.git",
                 "reference": "c6801d43db1c0de06866e049dfb4518ce0c033ad"
             },
             "require": {
@@ -1994,15 +1994,15 @@
         },
         {
             "name": "wpackagist-plugin/google-analytics-for-wordpress",
-            "version": "6.0.0",
+            "version": "6.0.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
-                "reference": "tags/6.0.0"
+                "reference": "tags/6.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.6.0.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.6.0.1.zip",
                 "reference": null,
                 "shasum": null
             },

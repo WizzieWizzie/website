@@ -10,7 +10,7 @@
 ### 2. Clone this repository into a directory
 ```bash
 $ git clone git@github.com:WizzieWizzie/website.git
-$ cd vagrant
+$ cd website
 $ git submodule update --init --recursive
 ```
 
