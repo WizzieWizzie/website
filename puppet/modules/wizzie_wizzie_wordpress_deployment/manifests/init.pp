@@ -1,4 +1,24 @@
-class wizzie_wizzie_wordpress_deployment($server, $user, $group) {
+class wizzie_wizzie_wordpress_deployment($user, $group,
+  $efsMountDevice = '',
+  $dbHost = 'localhost',
+  $dbName = 'Wizzie',
+  $dbUser = 'root',
+  $dbPass = '',
+  $googleSheetAccountEmail = '', 
+  $wizzieEmailSenderEmail = '',
+  $wizzieEmailSenderName = '',
+  $wizzieEmailSenderCCS = '',
+  $wizzieMailerUsername = '',
+  $wizzieMailerPassword = '',
+  $saltsAuthKey = '',
+  $saltsSecureAuthKey = '',
+  $saltsLoggedInKey = '',
+  $saltsNonceKey = '',
+  $saltsAuth = '',
+  $saltsSecureAuth = '',
+  $saltsLoggedIn = '',
+  $saltsNonce = '',
+) {
    
   ensure_packages( ["git"] )
 
@@ -8,9 +28,8 @@ class wizzie_wizzie_wordpress_deployment($server, $user, $group) {
     group => "$group",
   }
 
-  # todo remove the .git dir
   exec { "clone the git repo" :
-    command => "su $user -c \"git clone git@bitbucket.org:wizziewizzie/website.git /opt/wizzie-wizzie-wordpress/.\"",
+    command => "su $user -c \"git clone git@github.com:WizzieWizzie/website.git /opt/wizzie-wizzie-wordpress/.\"",
     cwd => "/home/$user",
     require =>  [
       Class["wizzie_wizzie_deployment_keys"],
@@ -22,12 +41,12 @@ class wizzie_wizzie_wordpress_deployment($server, $user, $group) {
   exec { "run composer install" :
     environment => ["COMPOSER_HOME=/root"],
     command => "composer install",
-    cwd => "/opt/wizzie-wizzie-wordpress",
+    cwd => "/opt/wizzie-wizzie-wordpress/website",
     require => Exec["clone the git repo"]
   }
 
-  file { "/opt/wizzie-wizzie-wordpress/local-config.php":
-    source => "puppet:///modules/wizzie_wizzie_wordpress_deployment/local-config.php.$server",
+  file { "/opt/wizzie-wizzie-wordpress/website/local-config.php":
+    content => template('wizzie_wizzie_wordpress_deployment/local-config.php.erb'),
     owner => "$user",
     group => "$user",
     mode => "664",
@@ -44,7 +63,7 @@ class wizzie_wizzie_wordpress_deployment($server, $user, $group) {
   }
 
   mount { "/opt/wizzie-wizzie-data":
-    device  => "***REMOVED***",
+    device  => "$efsMountDevice",
     fstype  => "nfs",
     ensure  => "mounted",
     options => "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2",
@@ -52,7 +71,7 @@ class wizzie_wizzie_wordpress_deployment($server, $user, $group) {
     require => File["/opt/wizzie-wizzie-data"]
   }
 
-  file { '/opt/wizzie-wizzie-wordpress/content/uploads':
+  file { '/opt/wizzie-wizzie-wordpress/website/content/uploads':
     ensure => 'link',
     target => '/opt/wizzie-wizzie-data/www.wizziewizzie.org.uploads/',
     require => Mount["/opt/wizzie-wizzie-data"]

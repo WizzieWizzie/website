@@ -1,9 +1,0 @@
-<?php
-
-define('DB_NAME', '***REMOVED***');
-define('DB_USER', '***REMOVED***');
-define('DB_PASSWORD', '***REMOVED***');
-define('DB_HOST', '***REMOVED***.***REMOVED***');
-define('WP_HOME', 'https://www.wizziewizzie.org/');
-define('WP_SITEURL', 'https://www.wizziewizzie.org/wordpress');
-

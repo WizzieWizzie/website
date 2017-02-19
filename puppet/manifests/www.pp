@@ -22,7 +22,6 @@ class www {
   class { 'wizzie_wizzie_wordpress_deployment':
     user    => 'admin',
     group   => 'www-data',
-    server  => 'www',
     require => [
       Class['wordpress_server'],
       Class['wizzie_wizzie_deployment_keys']

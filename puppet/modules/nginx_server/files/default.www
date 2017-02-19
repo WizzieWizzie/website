@@ -19,7 +19,7 @@ server {
     server_name www.wizziewizzie.org;
     client_max_body_size 100m;
 
-    root /opt/wizzie-wizzie-wordpress;
+    root /opt/wizzie-wizzie-wordpress/website;
     index index.php;
 
     location /volunteering {
