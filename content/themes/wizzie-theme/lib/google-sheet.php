@@ -8,27 +8,6 @@
  * @link       https://bitbucket.org/madebydavid/wizziewizziewptheme
  */
 
-if (!defined('GOOGLE_SHEET_ACCOUNT_EMAIL')) 
-    define('GOOGLE_SHEET_ACCOUNT_EMAIL', '***REMOVED***');
-
-if (!defined('GOOGLE_SHEET_ACCOUNT_KEYFILE')) 
-    define('GOOGLE_SHEET_ACCOUNT_KEYFILE', WP_CONTENT_DIR . '***REMOVED***');
-
-if (!defined('GOOGLE_SHEET_ACCOUNT_SCOPE')) 
-    define('GOOGLE_SHEET_ACCOUNT_SCOPE', 'https://spreadsheets.google.com/feeds');
-
-if (!defined('GOOGLE_SHEET_PARENTS_SPREADSHEET_NAME')) 
-    define('GOOGLE_SHEET_PARENTS_SPREADSHEET_NAME', '***REMOVED***');
-
-if (!defined('GOOGLE_SHEET_PARENTS_WORKSHEET_NAME')) 
-    define('GOOGLE_SHEET_PARENTS_WORKSHEET_NAME', '***REMOVED***');
-
-if (!defined('GOOGLE_SHEET_VOLUNTEERS_SPREADSHEET_NAME'))
-    define('GOOGLE_SHEET_VOLUNTEERS_SPREADSHEET_NAME', '***REMOVED***');
-
-if (!defined('GOOGLE_SHEET_VOLUNTEERS_WORKSHEET_NAME'))
-    define('GOOGLE_SHEET_VOLUNTEERS_WORKSHEET_NAME', '***REMOVED***');
-
 require_once WP_CONTENT_DIR . '/../vendor/autoload.php';
 
 use Google\Spreadsheet\DefaultServiceRequest;

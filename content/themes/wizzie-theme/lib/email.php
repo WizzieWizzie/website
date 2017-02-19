@@ -8,21 +8,6 @@
  * @link       https://bitbucket.org/madebydavid/wizziewizziewptheme
  */
 
-if (!defined('WIZZIE_EMAIL_SENDER_EMAIL')) 
-	define('WIZZIE_EMAIL_SENDER_EMAIL', '***REMOVED***');
-
-if (!defined('WIZZIE_EMAIL_SENDER_NAME')) 
-	define('WIZZIE_EMAIL_SENDER_NAME', 'Wizzie Wizzie Computer Coding Club');
-
-if (!defined('WIZZIE_EMAIL_CCS'))
-	define('WIZZIE_EMAIL_CCS', 'sutherland.dave@gmail.com,milverton@gmail.com');
-
-if (!defined('WIZZIE_MAILER_USERNAME'))
-	define('WIZZIE_MAILER_USERNAME', '***REMOVED***');
-
-if (!defined('WIZZIE_MAILER_PASSWORD'))
-	define('WIZZIE_MAILER_PASSWORD', '***REMOVED***');
-
 require_once WP_CONTENT_DIR . '/../vendor/autoload.php';
 
 /**
