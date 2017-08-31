@@ -910,19 +910,19 @@ footer .copyright { font-size: 13px; line-height: 20px; letter-spacing: 0.025em;
 
 /* IOS
 ----------------------------------------------------------------------------------------------- */
+/* DS: what is this for - seems to overlap home page with grey box? */
 body.iOS:not(.nav-open):before {
     content: "";
     width: 100%;
     height: 400px;
-    background-color: #ddd;
-    z-index: 1;
+    /*background-color: #ddd;*/
+    /*z-index: 1;*/
     display: block;
     position: fixed;
     left: 0px;
     top: 70px;
     box-shadow: inset 0px 6px 6px -6px rgba(0, 0, 0, 0.2);
-    background: #ddd url("../images/svg/bobble-bob-up.svg") no-repeat scroll center 120px;
-
+    /*background: #ddd url("../images/svg/bobble-bob-up.svg") no-repeat scroll center 120px;*/
 }
 
 /*
