@@ -57,7 +57,9 @@ server {
     }
 
     location / {
-    
+
+	proxy_max_temp_file_size 0;
+ 
         # force redirect of http to https
         if ( $http_x_forwarded_proto != 'https' ) {
             return 301 https://$host$request_uri;
