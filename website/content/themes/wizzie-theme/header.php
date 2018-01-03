@@ -82,8 +82,8 @@
         <div class="ribbon-wrapper-green">
             <div class="ribbon-green">
                 <a href="sign-up/#signUp">
-                    Autumn Term
-                    <span>Sep. 16th until Nov. 25th</span>
+                    Winter Term
+                    <span>Jan. 6th until Mar. 24th</span>
                 </a>
             </div>
         </div>
