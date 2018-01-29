@@ -1,3 +1,6 @@
 [submodule "ops/puppet/modules/stdlib"]
 	path = ops/puppet/modules/stdlib
 	url = git@github.com:puppetlabs/puppetlabs-stdlib.git
+[submodule "ops/puppet/modules/ntp"]
+	path = ops/puppet/modules/ntp
+	url = git@github.com:puppetlabs/puppetlabs-ntp.git
