@@ -250,7 +250,12 @@ p,
 
 /* Global Wrappers
 ------------------------------------------------------------------------------------------ */
-.vp-wrapper { position: relative; width: 100%; min-height: 100%; margin: 0; /*z-index: 10;*/ }
+.vp-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
 
 .vp-wrapper.slide{
 	left: -500px;
@@ -266,7 +271,15 @@ main { padding-top: 120px; }
 
 /* Header - Identity + Navigation
 ------------------------------------------------------------------------------------------ */
-header { position: fixed; top: 0; right: 0; width: 100%; padding: 0 60px; background: rgba(255,255,255,1); z-index: 20; }
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 0 60px;
+  background: rgba(255,255,255,1);
+  z-index: 101;
+}
 
 	/* header.fixed { position: fixed; } */
 
@@ -1055,7 +1068,7 @@ Term Date Banner / Sash / Ribbon thing
     position: fixed;
     top: -3px;
     left: -3px;
-    z-index: 100;
+    z-index: 101;
 }
 
 .ribbon-green {
