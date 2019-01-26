@@ -99,7 +99,7 @@ function wizzie_scripts(){
     }
 
     $template = get_wp_template();
-    $gmapsApiKey = "AIzaSyDlxjpW_MizvPRGfEYiEZl5xinJZbivse8";
+    $gmapsApiKey = "AIzaSyABI3vd9qV8i5zIKN_k15DJQo76jkQyW4Y";
 
     wp_register_script('modernizr',   get_template_directory_uri().'/js/vendor/modernizr-2.8.3-custom.js'     , array('jquery'), '2.8.3', false);
     wp_register_script('plugins',     get_template_directory_uri().'/js/plugins.js'                           , array('jquery'), null   , true);
